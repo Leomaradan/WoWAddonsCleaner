@@ -87,6 +87,7 @@ namespace WoWAddonsCleaner
         private void btnScanAddons_Click(object sender, EventArgs e)
         {
             scanAddons();
+            tabControl.Enabled = true;
         }
 
         private void scanAddons()
