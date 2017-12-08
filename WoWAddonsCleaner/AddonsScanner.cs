@@ -362,31 +362,64 @@ namespace WoWAddonsCleaner
 
         public void removeCharacter(string account, string server, string character)
         {
-            ///MessageBox.Show("removeCharacter: " + account + " " + server + " " + character);
-            DirectoryInfo wtfFolder = new DirectoryInfo(basePath + Path.DirectorySeparatorChar + @"WTF\Account\" + 
-                account + Path.DirectorySeparatorChar + 
-                server + Path.DirectorySeparatorChar + 
-                character);
-            wtfFolder.Delete(true);
+            DirectoryInfo wtfFolder;
+            string pathServerA = basePath + Path.DirectorySeparatorChar + @"WTF\Account\" +
+                account + Path.DirectorySeparatorChar +
+                server + Path.DirectorySeparatorChar +
+                character;
+            string pathServerB = basePath + Path.DirectorySeparatorChar + @"WTF\Account\" +
+                account + Path.DirectorySeparatorChar +
+                server.Replace('’', '\'') + Path.DirectorySeparatorChar +
+                character;
 
-            wtfFolder = new DirectoryInfo(basePath + Path.DirectorySeparatorChar + @"WTF\Account\" + 
-                account + Path.DirectorySeparatorChar + 
-                server.Replace('’', '\'') + Path.DirectorySeparatorChar + 
-                character);
-            wtfFolder.Delete(true);
+            if (Directory.Exists(pathServerA))
+            {
+                wtfFolder = new DirectoryInfo(pathServerA);
+
+                if(wtfFolder.Parent.GetDirectories().Length == 1)
+                {
+                    wtfFolder.Parent.Delete(true);
+                } else
+                {
+                    wtfFolder.Delete(true);
+                }
+            }
+
+            if (Directory.Exists(pathServerB))
+            {
+                wtfFolder = new DirectoryInfo(pathServerB);
+
+                if (wtfFolder.Parent.GetDirectories().Length == 1)
+                {
+                    wtfFolder.Parent.Delete(true);
+                }
+                else
+                {
+                    wtfFolder.Delete(true);
+                }
+            }
+
         }
 
         public void removeServer(string account, string server)
         {
-            //MessageBox.Show("removeServer: " + account + " " + server);
-            DirectoryInfo wtfFolder = new DirectoryInfo(basePath + Path.DirectorySeparatorChar + @"WTF\Account\" +
+
+            string pathServerA = basePath + Path.DirectorySeparatorChar + @"WTF\Account\" +
                 account + Path.DirectorySeparatorChar +
-                server);
-            wtfFolder.Delete(true);
-            wtfFolder = new DirectoryInfo(basePath + Path.DirectorySeparatorChar + @"WTF\Account\" +
+                server;
+            string pathServerB = basePath + Path.DirectorySeparatorChar + @"WTF\Account\" +
                 account + Path.DirectorySeparatorChar +
-                server.Replace('’', '\''));
-            wtfFolder.Delete(true);
+                server.Replace('’', '\'');
+
+            if (Directory.Exists(pathServerA))
+            {
+                Directory.Delete(pathServerA, true);
+            }
+
+            if (Directory.Exists(pathServerB))
+            {
+                Directory.Delete(pathServerB, true);
+            }
         }
 
         public void removeAddons(List<string> addons)
