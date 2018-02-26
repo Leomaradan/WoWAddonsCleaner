@@ -47,6 +47,7 @@
             this.typeFile = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnBackupWTF = new System.Windows.Forms.Button();
             this.btnDeleteOrphanWTF = new System.Windows.Forms.Button();
+            this.btnDeleteBakFile = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -59,6 +60,8 @@
             // 
             // txtWoWFolder
             // 
+            this.txtWoWFolder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtWoWFolder.Location = new System.Drawing.Point(12, 12);
             this.txtWoWFolder.Name = "txtWoWFolder";
             this.txtWoWFolder.Size = new System.Drawing.Size(317, 20);
@@ -67,6 +70,7 @@
             // 
             // btnSearchWoW
             // 
+            this.btnSearchWoW.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearchWoW.Location = new System.Drawing.Point(335, 12);
             this.btnSearchWoW.Name = "btnSearchWoW";
             this.btnSearchWoW.Size = new System.Drawing.Size(128, 20);
@@ -77,6 +81,7 @@
             // 
             // btnScanAddons
             // 
+            this.btnScanAddons.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnScanAddons.Enabled = false;
             this.btnScanAddons.Location = new System.Drawing.Point(335, 38);
             this.btnScanAddons.Name = "btnScanAddons";
@@ -88,6 +93,9 @@
             // 
             // tabControl
             // 
+            this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Controls.Add(this.tabPage2);
             this.tabControl.Controls.Add(this.tabPage3);
@@ -113,6 +121,7 @@
             // 
             // btnBackupAddons
             // 
+            this.btnBackupAddons.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBackupAddons.Location = new System.Drawing.Point(309, 36);
             this.btnBackupAddons.Name = "btnBackupAddons";
             this.btnBackupAddons.Size = new System.Drawing.Size(127, 23);
@@ -124,6 +133,9 @@
             // 
             // listAddons
             // 
+            this.listAddons.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listAddons.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Addon});
             this.listAddons.Location = new System.Drawing.Point(7, 7);
@@ -140,6 +152,7 @@
             // 
             // btnDeleteOrphanAddons
             // 
+            this.btnDeleteOrphanAddons.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeleteOrphanAddons.Location = new System.Drawing.Point(309, 7);
             this.btnDeleteOrphanAddons.Name = "btnDeleteOrphanAddons";
             this.btnDeleteOrphanAddons.Size = new System.Drawing.Size(127, 23);
@@ -162,6 +175,7 @@
             // 
             // btnDeleteCharacter
             // 
+            this.btnDeleteCharacter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeleteCharacter.Enabled = false;
             this.btnDeleteCharacter.Location = new System.Drawing.Point(309, 7);
             this.btnDeleteCharacter.Name = "btnDeleteCharacter";
@@ -173,6 +187,9 @@
             // 
             // treeCharacters
             // 
+            this.treeCharacters.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.treeCharacters.FullRowSelect = true;
             this.treeCharacters.HideSelection = false;
             this.treeCharacters.Location = new System.Drawing.Point(7, 7);
@@ -183,6 +200,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btnDeleteBakFile);
             this.tabPage3.Controls.Add(this.listWTF);
             this.tabPage3.Controls.Add(this.btnBackupWTF);
             this.tabPage3.Controls.Add(this.btnDeleteOrphanWTF);
@@ -196,6 +214,9 @@
             // 
             // listWTF
             // 
+            this.listWTF.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listWTF.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.file,
             this.typeFile});
@@ -216,17 +237,19 @@
             // 
             // btnBackupWTF
             // 
+            this.btnBackupWTF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBackupWTF.Enabled = false;
             this.btnBackupWTF.Location = new System.Drawing.Point(309, 36);
             this.btnBackupWTF.Name = "btnBackupWTF";
             this.btnBackupWTF.Size = new System.Drawing.Size(127, 23);
             this.btnBackupWTF.TabIndex = 3;
             this.btnBackupWTF.Text = "Backup de WTF";
             this.btnBackupWTF.UseVisualStyleBackColor = true;
-            this.btnBackupWTF.Visible = false;
             this.btnBackupWTF.Click += new System.EventHandler(this.btnBackupWTF_Click);
             // 
             // btnDeleteOrphanWTF
             // 
+            this.btnDeleteOrphanWTF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeleteOrphanWTF.Location = new System.Drawing.Point(309, 7);
             this.btnDeleteOrphanWTF.Name = "btnDeleteOrphanWTF";
             this.btnDeleteOrphanWTF.Size = new System.Drawing.Size(127, 23);
@@ -234,6 +257,17 @@
             this.btnDeleteOrphanWTF.Text = "Supprimer";
             this.btnDeleteOrphanWTF.UseVisualStyleBackColor = true;
             this.btnDeleteOrphanWTF.Click += new System.EventHandler(this.btnDeleteOrphanWTF_Click);
+            // 
+            // btnDeleteBakFile
+            // 
+            this.btnDeleteBakFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteBakFile.Location = new System.Drawing.Point(309, 65);
+            this.btnDeleteBakFile.Name = "btnDeleteBakFile";
+            this.btnDeleteBakFile.Size = new System.Drawing.Size(127, 23);
+            this.btnDeleteBakFile.TabIndex = 5;
+            this.btnDeleteBakFile.Text = "Suppression des *.bak";
+            this.btnDeleteBakFile.UseVisualStyleBackColor = true;
+            this.btnDeleteBakFile.Click += new System.EventHandler(this.btnDeleteBakFile_Click);
             // 
             // Form1
             // 
@@ -244,9 +278,11 @@
             this.Controls.Add(this.btnScanAddons);
             this.Controls.Add(this.btnSearchWoW);
             this.Controls.Add(this.txtWoWFolder);
+            this.MinimumSize = new System.Drawing.Size(491, 462);
             this.Name = "Form1";
             this.Text = "WoW Addons Cleaner";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.tabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -277,6 +313,7 @@
         private System.Windows.Forms.ListView listWTF;
         private System.Windows.Forms.ColumnHeader file;
         private System.Windows.Forms.ColumnHeader typeFile;
+        private System.Windows.Forms.Button btnDeleteBakFile;
     }
 }
 

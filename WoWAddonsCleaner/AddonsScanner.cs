@@ -25,6 +25,8 @@ namespace WoWAddonsCleaner
         List<string> orphanSavedVariables;
         List<string> orphanSavedVariablesPerCharacter;
 
+        List<string> bakFiles;
+
         internal AddonsScanner(string path)
         {
             basePath = path;
@@ -36,12 +38,15 @@ namespace WoWAddonsCleaner
             orphanAddons = new HashSet<string>();
             //blizzardAddons = new List<string>();
 
+
             wtfFiles = new Dictionary<string, Dictionary<string, Dictionary<string, List<string>>>>();
 
             savedVariables = new List<string>();
             savedVariablesPerCharacter = new List<string>();
             orphanSavedVariables = new List<string>();
             orphanSavedVariablesPerCharacter = new List<string>();
+
+            bakFiles = new List<string>();
 
 
         }
@@ -72,6 +77,7 @@ namespace WoWAddonsCleaner
             orphanSavedVariablesPerCharacter.Clear();
 
             wtfFiles.Clear();
+            bakFiles.Clear();
 
             //wtf = new Dictionary<string, Dictionary<string, Dictionary<string, List<string>>>>();
 
@@ -108,6 +114,11 @@ namespace WoWAddonsCleaner
                                         orphanSavedVariablesPerCharacter.Add(filename);
                                     }
                                 }
+
+                                foreach (FileInfo bakFile in savedVariableFolder[0].GetFiles("*.bak"))
+                                {
+                                    bakFiles.Add(bakFile.FullName);
+                                }
                             }
 
 
@@ -141,6 +152,10 @@ namespace WoWAddonsCleaner
                             {
                                 orphanSavedVariables.Add(filename);
                             }
+                        }
+                        foreach (FileInfo bakFile in serverDir.GetFiles("*.bak"))
+                        {
+                            bakFiles.Add(bakFile.FullName);
                         }
                     }
                     //Distinct
@@ -478,6 +493,15 @@ namespace WoWAddonsCleaner
                     }                      
                 }
             }
+        }
+
+        public int removeBak()
+        {
+            foreach (string bakFile in bakFiles)
+            {
+                File.Delete(bakFile);
+            }
+            return bakFiles.Count;
         }
         
     }

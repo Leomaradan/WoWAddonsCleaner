@@ -261,5 +261,24 @@ namespace WoWAddonsCleaner
         {
             //ZipFile.CreateFromDirectory(dirPath, zipFile);
         }
+
+        private void btnDeleteBakFile_Click(object sender, EventArgs e)
+        {
+            var confirmResult = MessageBox.Show("Êtes-vous sur de vouloir supprimer le(s) fichier(s) *.bak ?",
+                     "Confirmation de suppression",
+                     MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                int count = scan.removeBak();
+                MessageBox.Show(count + " fichier(s) *.bak ont été supprimé");
+            }
+                
+        }
+
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+            listWTF.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            listWTF.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+        }
     }
 }
