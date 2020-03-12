@@ -9,7 +9,13 @@
       <Value Profile="(Default)">80300</Value>
     </Setting>
     <Setting Name="MissingAddonsExceptions" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">WeakAurasCompanion</Value>
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Lang" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">frFR</Value>
+    </Setting>
+    <Setting Name="AutoClean" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

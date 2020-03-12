@@ -14,14 +14,14 @@ namespace WoWAddonsCleaner
         //List<string> addons
         bool oHasScan = false;
 
-        private IndexedHashSet oMainAddons;
+        //private IndexedHashSet oMainAddons;
 
         private HashSet<string> oOrphanAddons;
 
-        private Dictionary<string, string[]> oSubAddons;
-        
+        //private Dictionary<string, string[]> oSubAddons;
+
         private Dictionary<string, List<string>> oPurgeAddons;
-        private Dictionary<string, Addon> oAddonsVersion;
+        private Dictionary<string, Addon> oAddons;
         private Dictionary<string, Dictionary<string, Dictionary<string, List<string>>>> oFilesWTF;
         private Dictionary<string, Dictionary<string, Dictionary<string, List<string>>>> oMissingAddons;
 
@@ -37,20 +37,22 @@ namespace WoWAddonsCleaner
 
         private ToolStripProgressBar progressBar;
 
-        internal AddonsScanner(string iPath, List<string> missingAddonsExceptions, ToolStripProgressBar iProgressBar)
+        private string lang;
+
+        internal AddonsScanner(string iPath, List<string> missingAddonsExceptions, string lang, ToolStripProgressBar iProgressBar)
         {
             this.oBasePath = iPath;
 
-            this.oMainAddons = new IndexedHashSet();
+            //this.oMainAddons = new IndexedHashSet();
             this.oOrphanAddons = new HashSet<string>();
 
-            this.oSubAddons = new Dictionary<string, string[]>();
+            //this.oSubAddons = new Dictionary<string, string[]>();
 
             this.oPurgeAddons = new Dictionary<string, List<string>>();
-            this.oAddonsVersion = new Dictionary<string, Addon>();
+            this.oAddons = new Dictionary<string, Addon>();
             this.oFilesWTF = new Dictionary<string, Dictionary<string, Dictionary<string, List<string>>>>();
             this.oMissingAddons = new Dictionary<string, Dictionary<string, Dictionary<string, List<string>>>>();
-            
+
             this.oSavedVariables = new List<string>();
             this.oSavedVariablesPerCharacter = new List<string>();
             this.oOrphanSavedVariables = new List<string>();
@@ -62,6 +64,8 @@ namespace WoWAddonsCleaner
             this.oAllProperties = new List<string>();
 
             this.progressBar = iProgressBar;
+
+            this.lang = lang;
         }
 
         #region Getter
@@ -107,7 +111,7 @@ namespace WoWAddonsCleaner
             }
         }
 
-        public Dictionary<string, Addon> addonsVersion
+        public Dictionary<string, Addon> addons
         {
             get
             {
@@ -116,11 +120,11 @@ namespace WoWAddonsCleaner
                     doScan();
                 }
 
-                return oAddonsVersion;
+                return oAddons;
             }
         }
 
-        public Dictionary<string, Dictionary<string, Dictionary<string, List<string>>>> missingAddons
+        public Dictionary<string, Dictionary<string, Dictionary<string, List<string>>>> missingAddonReferences
         {
             get
             {
@@ -167,6 +171,11 @@ namespace WoWAddonsCleaner
         private void scanWTFFolder()
         {
             DirectoryInfo wtfFolder = new DirectoryInfo(this.pathWTF);
+
+            if (oAddons.Count == 0)
+            {
+                throw new Exception("scanWTFFolder called before populating Addon List");
+            }
 
             oOrphanSavedVariables.Clear();
             oOrphanSavedVariablesPerCharacter.Clear();
@@ -225,7 +234,7 @@ namespace WoWAddonsCleaner
                                 foreach (string line in lines)
                                 {
                                     string addonName = line.Replace(": enabled", "").Replace(": disabled", "").ToLower().Trim();
-                                    if (!oAddonsVersion.ContainsKey(addonName) && !this.oMissingAddonsExceptions.Contains(addonName))
+                                    if (!oAddons.ContainsKey(addonName) && !this.oMissingAddonsExceptions.Contains(addonName))
                                     {
                                         if (!oMissingAddons.ContainsKey(addonName))
                                         {
@@ -289,14 +298,24 @@ namespace WoWAddonsCleaner
             }
         }
 
+        private string cleanString(string source)
+        {
+            source = Regex.Replace(source, @"\|c[0-9a-fA-F]{8}", "");
+            source = Regex.Replace(source, @"\|r", "");
+            source = Regex.Replace(source, @"\<|\>", "");
+
+            return source.Trim();
+        }
         private void scanAddonFolder()
         {
             DirectoryInfo addonsFolder = new DirectoryInfo(pathInterface);
+            var spliter = new char[] { ',', ' ' };
 
-            oMainAddons.Clear();
-            oSubAddons.Clear();
-            oAddonsVersion.Clear();
-            oOrphanAddons.Clear();
+
+            //oMainAddons.Clear();
+            //oSubAddons.Clear();
+            oAddons.Clear();
+            //oOrphanAddons.Clear();
 
             oSavedVariables.Clear();
             oSavedVariablesPerCharacter.Clear();
@@ -306,48 +325,54 @@ namespace WoWAddonsCleaner
             {
                 foreach (FileInfo file in dir.GetFiles("*.toc"))
                 {
+                    Addon wAddon = new Addon();
+
                     var lines = File.ReadAllLines(file.FullName);
                     string title = null;
+                    string titleLocalized = null;
                     string plainTitle = null;
-                    string version = null;
+
+                    string notes = null;
+                    string notesLocalized = null;
+
                     string filename = file.Name.Substring(0, file.Name.Length - 4).ToLower();
                     foreach (var line in lines)
                     {
-                        // TEMP
-                        if(line.StartsWith("## "))
-                        {
-                            int wDotPos = line.IndexOf(':');
-                            if(wDotPos != -1)
-                            {
-                                string property = line.Substring(2, wDotPos - 2).Trim();
-                                if (!this.oAllProperties.Contains(property))
-                                {
-                                    this.oAllProperties.Add(property);
-                                }
-                            }
-
-                        }
+                        int wDotPos = line.IndexOf(':') + 1;
 
                         if (line.StartsWith("## Interface:"))
                         {
-                            version = line.Substring(13).ToLower().Trim();
+                            wAddon.version = new Version(line.Substring(wDotPos).ToLower().Trim());
                         }
+
                         if (line.StartsWith("## Plain Title:"))
                         {
-                            plainTitle = line.Substring(15).Trim();
+                            plainTitle = cleanString(line.Substring(wDotPos));
                         }
+
                         if (line.StartsWith("## Title:"))
                         {
-                            title = line.Substring(9);
-                            title = Regex.Replace(title, @"\|c[0-9a-fA-F]{8}", "");
-                            title = Regex.Replace(title, @"\|r", "");
-                            title = Regex.Replace(title, @"\<|\>", "");
-
-                            title = title.Trim();
+                            title = cleanString(line.Substring(wDotPos));
                         }
-                        else if (line.StartsWith("## Dependencies:"))
+
+                        if (line.StartsWith("## Title-" + this.lang + ":"))
                         {
-                            if (oSubAddons.ContainsKey(filename))
+                            titleLocalized = cleanString(line.Substring(wDotPos));
+                        }
+
+                        if (line.StartsWith("## Notes:"))
+                        {
+                            notes = cleanString(line.Substring(wDotPos));
+                        }
+
+                        if (line.StartsWith("## Notes-" + this.lang + ":"))
+                        {
+                            notesLocalized = cleanString(line.Substring(wDotPos));
+                        }
+
+                        if (line.StartsWith("## Dep") || line.StartsWith("## RequiredDeps")) //Dependencies, RequiredDeps, Dep*
+                        {
+                            /*if (oSubAddons.ContainsKey(filename))
                             {
                                 List<string> arr = new List<string>(oSubAddons[filename]);
                                 arr.AddRange(line.Substring(16).ToLower().Trim().Split(','));
@@ -356,35 +381,76 @@ namespace WoWAddonsCleaner
                             else
                             {
                                 oSubAddons.Add(filename, line.Substring(17).ToLower().Split(','));
-                            }
+                            }*/
+
+                            //new char[] { ']', '[' }, StringSplitOptions.RemoveEmptyEntries
+                            wAddon.dependencies.AddRange(line.Substring(wDotPos).ToLower().Trim().Split(spliter, StringSplitOptions.RemoveEmptyEntries));
 
                         }
-                        else if (line.StartsWith("RequiredDeps:"))
+
+                        if (line.StartsWith("## OptionalDependencies") || line.StartsWith("## OptionalDep")) //Dependencies, RequiredDeps, Dep*
+                        {
+                            wAddon.optionalDependencies.AddRange(line.Substring(wDotPos).ToLower().Trim().Split(spliter, StringSplitOptions.RemoveEmptyEntries));
+                        }
+
+                        if (line.StartsWith("## Author") || line.StartsWith("## Autor")) //Dependencies, RequiredDeps, Dep*
+                        {
+                            wAddon.author = line.Substring(wDotPos).ToLower().Trim();
+                        }
+                        /*else if (line.StartsWith("RequiredDeps:"))
                         {
                             oSubAddons.Add(filename, line.Substring(13).ToLower().Trim().Split(','));
-                        }
+                        }*/
                         else
                         {
-                            oMainAddons.AddOrUpdate(filename, new HashSet<string>());
+                            //oMainAddons.AddOrUpdate(filename, new HashSet<string>());
                         }
 
                         if (line.StartsWith("## SavedVariables:"))
                         {
                             oSavedVariables.Add(filename);
+                            wAddon.savedVariables.AddRange(line.Substring(wDotPos).ToLower().Trim().Split(spliter, StringSplitOptions.RemoveEmptyEntries));
                         }
                         else if (line.StartsWith("## SavedVariablesPerCharacter:"))
                         {
                             oSavedVariablesPerCharacter.Add(filename);
+                            wAddon.savedVariablesPerCharacter.AddRange(line.Substring(wDotPos).ToLower().Trim().Split(spliter, StringSplitOptions.RemoveEmptyEntries));
                         }
 
                     }
-                    if ((title != null || plainTitle != null) && version != null)
+
+                    if (title != null || plainTitle != null || titleLocalized != null)
                     {
-                        var addonWithVersion = new Addon();
-                        addonWithVersion.version = new Version(version);
-                        addonWithVersion.title = plainTitle != null ? plainTitle : title;
-                        oAddonsVersion.Add(filename, addonWithVersion);
+                        if (titleLocalized != null)
+                        {
+                            wAddon.title = titleLocalized;
+                        }
+                        else if (plainTitle != null)
+                        {
+                            wAddon.title = plainTitle;
+
+                        }
+                        else
+                        {
+                            wAddon.title = title;
+                        }
+
                     }
+
+                    if (notes != null || notesLocalized != null)
+                    {
+                        wAddon.notes = notesLocalized ?? notes;
+                    }
+
+                    // Clean empty values
+                    /*wAddon.dependencies = wAddon.dependencies.Where(x => x != "").ToList();
+                    wAddon.optionalDependencies = wAddon.optionalDependencies.Where(x => x != "").ToList();
+                    wAddon.savedVariables = wAddon.savedVariables.Where(x => x != "").ToList();
+                    wAddon.savedVariablesPerCharacter = wAddon.savedVariablesPerCharacter.Where(x => x != "").ToList();*/
+
+                    wAddon.filename = filename;
+
+                    oAddons.Add(filename, wAddon);
                 }
 
             }
@@ -392,20 +458,15 @@ namespace WoWAddonsCleaner
 
         private void checkOrphanAddons()
         {
-            Dictionary<string, string[]> copySubAddons = new Dictionary<string, string[]>(oSubAddons);
-            foreach (KeyValuePair<string, string[]> sub in copySubAddons) // child, parent
+            foreach (KeyValuePair<string, Addon> sub in oAddons) // child, parent
             {
-                for (int i = 0; i < sub.Value.Length; i++)
+                Addon wAddon = sub.Value;
+                for (int i = 0; i < wAddon.dependencies.Count; i++)
                 {
-                    string key = sub.Value[i].Trim();
-                    if (oMainAddons.ContainsKey(key))
+                    string key = wAddon.dependencies[i].Trim();
+                    if (oAddons.ContainsKey(key))
                     {
-                        oMainAddons[key].Add(sub.Key);
-                    }
-                    else if (oSubAddons.ContainsKey(key))
-                    {
-                        oMainAddons.AddOrUpdate(key, new HashSet<string>());
-                        oMainAddons[key].Add(sub.Key);
+                        oAddons[key].subAddons.Add(sub.Key, this.oAddons[sub.Key]);
                     }
                     else if (key.StartsWith("blizzard_"))
                     {
@@ -414,7 +475,6 @@ namespace WoWAddonsCleaner
                     else
                     {
                         oOrphanAddons.Add(sub.Key);
-                        oSubAddons.Remove(sub.Key);
                     }
                 }
 
@@ -552,7 +612,8 @@ namespace WoWAddonsCleaner
                         {
                             newLines.Add("## Interface: " + iVersion);
                             newLines.Add("# WoWAddonsCleaner-Patch: Patched Version from " + line.Substring(13).ToLower().Trim());
-                        } else if (line.StartsWith("# WoWAddonsCleaner-Patch: "))
+                        }
+                        else if (line.StartsWith("# WoWAddonsCleaner-Patch: "))
                         {
                             // Skip the line
                         }
@@ -604,7 +665,7 @@ namespace WoWAddonsCleaner
             {
                 this.progressBar.Value += 1;
 
-                if(iSort)
+                if (iSort)
                 {
                     purge.Value.Sort((x, y) => x.CompareTo(y));
                 }
@@ -620,7 +681,7 @@ namespace WoWAddonsCleaner
             this.progressBar.Maximum = this.oAddonsTxt.Count;
             this.progressBar.Value = 0;
 
-            foreach(string addonPath in this.oAddonsTxt)
+            foreach (string addonPath in this.oAddonsTxt)
             {
                 List<string> lines = new List<string>(File.ReadAllLines(addonPath));
 
@@ -644,7 +705,7 @@ namespace WoWAddonsCleaner
 
             FileInfo fi = new FileInfo(this.pathWTF + filename);
 
-            if(fi.Exists)
+            if (fi.Exists)
             {
                 if (!oPurgeAddons.ContainsKey(filename))
                 {

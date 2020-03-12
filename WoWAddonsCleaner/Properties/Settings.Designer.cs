@@ -43,10 +43,28 @@ namespace WoWAddonsCleaner.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("WeakAurasCompanion")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string MissingAddonsExceptions {
             get {
                 return ((string)(this["MissingAddonsExceptions"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("frFR")]
+        public string Lang {
+            get {
+                return ((string)(this["Lang"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string AutoClean {
+            get {
+                return ((string)(this["AutoClean"]));
             }
         }
     }

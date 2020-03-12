@@ -4,14 +4,27 @@ namespace WoWAddonsCleaner
 {
     class Addon
     {
+        public string filename;
         public string title;
-        public string notes;
+        public string notes; // Notes, Notes-frFR
         public string author; // Author, Autor
-        public string optionalDependencies; // OptionalDependencies, OptionalDep* 
-        public string dependencies; // Dependencies, RequiredDeps, Dep*
+        public List<string> optionalDependencies; // OptionalDependencies, OptionalDep* 
+        public List<string> dependencies; // Dependencies, RequiredDeps, Dep*
         public List<string> savedVariables;
         public List<string> savedVariablesPerCharacter;
         public Version version;
+
+        public Dictionary<string, Addon> subAddons;
+
+        public Addon()
+        {
+            this.optionalDependencies = new List<string>();
+            this.dependencies = new List<string>();
+            this.savedVariables = new List<string>();
+            this.savedVariablesPerCharacter = new List<string>();
+
+            this.subAddons = new Dictionary<string, Addon>();
+        }
     }
     class Version
     {
