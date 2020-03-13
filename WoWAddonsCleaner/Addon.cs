@@ -2,7 +2,7 @@
 
 namespace WoWAddonsCleaner
 {
-    class Addon
+    internal class Addon
     {
         public string filename;
         public string title;
@@ -18,20 +18,21 @@ namespace WoWAddonsCleaner
 
         public Addon()
         {
-            this.optionalDependencies = new List<string>();
-            this.dependencies = new List<string>();
-            this.savedVariables = new List<string>();
-            this.savedVariablesPerCharacter = new List<string>();
+            optionalDependencies = new List<string>();
+            dependencies = new List<string>();
+            savedVariables = new List<string>();
+            savedVariablesPerCharacter = new List<string>();
 
-            this.subAddons = new Dictionary<string, Addon>();
+            subAddons = new Dictionary<string, Addon>();
         }
     }
-    class Version
+
+    internal class Version
     {
 
         public Version(string iVersion)
         {
-            this.version = iVersion;
+            version = iVersion;
         }
 
         public string version;
@@ -49,7 +50,7 @@ namespace WoWAddonsCleaner
 
         public string toString()
         {
-            return this.versionNum;
+            return versionNum;
         }
     }
 }

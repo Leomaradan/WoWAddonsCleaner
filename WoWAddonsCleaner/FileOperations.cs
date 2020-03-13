@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 
 namespace WoWAddonsCleaner
@@ -7,72 +6,72 @@ namespace WoWAddonsCleaner
 
     public delegate void TaskSteps();
 
-    class FileOperations
+    internal class FileOperations
     {
-        private List<string> oDeleteFileOperations;
-        private Dictionary<string, bool> oDeleteDirOperations;
-        private Dictionary<string, string[]> oReplaceOperations;
-        private TaskSteps oStep;
+        private readonly List<string> oDeleteFileOperations;
+        private readonly Dictionary<string, bool> oDeleteDirOperations;
+        private readonly Dictionary<string, string[]> oReplaceOperations;
+        private readonly TaskSteps oStep;
 
         public FileOperations()
         {
-            this.oDeleteFileOperations = new List<string>();
-            this.oDeleteDirOperations = new Dictionary<string, bool>();
-            this.oReplaceOperations = new Dictionary<string, string[]>();
-            this.FailedOperations = new List<string>();
-            this.oStep = () => { }; // Empty callback
+            oDeleteFileOperations = new List<string>();
+            oDeleteDirOperations = new Dictionary<string, bool>();
+            oReplaceOperations = new Dictionary<string, string[]>();
+            FailedOperations = new List<string>();
+            oStep = () => { }; // Empty callback
         }
 
         public FileOperations(TaskSteps iStep)
         {
-            this.oDeleteFileOperations = new List<string>();
-            this.oDeleteDirOperations = new Dictionary<string, bool>();
-            this.oReplaceOperations = new Dictionary<string, string[]>();
-            this.FailedOperations = new List<string>();
-            this.oStep = iStep;
+            oDeleteFileOperations = new List<string>();
+            oDeleteDirOperations = new Dictionary<string, bool>();
+            oReplaceOperations = new Dictionary<string, string[]>();
+            FailedOperations = new List<string>();
+            oStep = iStep;
 
         }
 
         public static string ResolvePath(params string[] iPaths)
         {
-            return String.Join(Path.DirectorySeparatorChar.ToString(), iPaths);
+            return string.Join(Path.DirectorySeparatorChar.ToString(), iPaths);
         }
 
         public void deleteDirectory(string iPath, bool iRecursive = false)
         {
-            if (!this.oDeleteDirOperations.ContainsKey(iPath))
+            if (!oDeleteDirOperations.ContainsKey(iPath))
             {
-                this.oDeleteDirOperations.Add(iPath, iRecursive);
+                oDeleteDirOperations.Add(iPath, iRecursive);
             }
             else if (iRecursive)
             {
-                this.oDeleteDirOperations[iPath] = true;
+                oDeleteDirOperations[iPath] = true;
             }
 
         }
 
         public void deleteFile(string iPath)
         {
-            if (!this.oDeleteFileOperations.Contains(iPath))
+            if (!oDeleteFileOperations.Contains(iPath))
             {
-                this.oDeleteFileOperations.Add(iPath);
+                oDeleteFileOperations.Add(iPath);
             }
         }
 
         public void replaceFile(string iPath, List<string> iContent)
         {
-            this.replaceFile(iPath, iContent.ToArray());
+            replaceFile(iPath, iContent.ToArray());
         }
 
         public void replaceFile(string iPath, string[] iContent)
         {
-            if (!this.oReplaceOperations.ContainsKey(iPath))
+            if (!oReplaceOperations.ContainsKey(iPath))
             {
-                this.oReplaceOperations.Add(iPath, iContent);
+                oReplaceOperations.Add(iPath, iContent);
             }
             else
             {
-                this.FailedOperations.Add("REPLACE DUPLICATE " + iPath);
+                FailedOperations.Add("REPLACE DUPLICATE " + iPath);
             }
         }
 
@@ -154,7 +153,7 @@ namespace WoWAddonsCleaner
 
         public int execute()
         {
-            foreach (KeyValuePair<string, string[]> wOperation in this.oReplaceOperations)
+            foreach (KeyValuePair<string, string[]> wOperation in oReplaceOperations)
             {
                 try
                 {
@@ -162,15 +161,15 @@ namespace WoWAddonsCleaner
                 }
                 catch
                 {
-                    this.FailedOperations.Add("REPLACE " + wOperation.Key);
+                    FailedOperations.Add("REPLACE " + wOperation.Key);
                 }
                 finally
                 {
-                    this.oStep();
+                    oStep();
                 }
             }
 
-            foreach (string wOperation in this.oDeleteFileOperations)
+            foreach (string wOperation in oDeleteFileOperations)
             {
                 try
                 {
@@ -178,15 +177,15 @@ namespace WoWAddonsCleaner
                 }
                 catch
                 {
-                    this.FailedOperations.Add("DELETE FILE " + wOperation);
+                    FailedOperations.Add("DELETE FILE " + wOperation);
                 }
                 finally
                 {
-                    this.oStep();
+                    oStep();
                 }
             }
 
-            foreach (KeyValuePair<string, bool> wOperation in this.oDeleteDirOperations)
+            foreach (KeyValuePair<string, bool> wOperation in oDeleteDirOperations)
             {
                 try
                 {
@@ -194,15 +193,15 @@ namespace WoWAddonsCleaner
                 }
                 catch
                 {
-                    this.FailedOperations.Add("DELETE DIR " + wOperation.Key);
+                    FailedOperations.Add("DELETE DIR " + wOperation.Key);
                 }
                 finally
                 {
-                    this.oStep();
+                    oStep();
                 }
             }
 
-            return this.FailedOperations.Count;
+            return FailedOperations.Count;
         }
 
         public List<string> FailedOperations { get; }

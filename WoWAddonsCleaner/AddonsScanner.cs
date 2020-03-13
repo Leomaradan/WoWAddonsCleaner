@@ -8,81 +8,69 @@ namespace WoWAddonsCleaner
 
     internal class AddonsScanner
     {
-        string oBasePath;
+        private readonly string oBasePath;
 
         //List<string> addons
-        bool oHasScan = false;
+        private bool oHasScan = false;
 
         //private IndexedHashSet oMainAddons;
 
-        private HashSet<string> oOrphanAddons;
+        private readonly HashSet<string> oOrphanAddons;
 
         //private Dictionary<string, string[]> oSubAddons;
 
-        private Dictionary<string, List<string>> oPurgeAddons;
-        private Dictionary<string, Addon> oAddons;
-        private Dictionary<string, Dictionary<string, Dictionary<string, List<string>>>> oFilesWTF;
-        private Dictionary<string, Dictionary<string, Dictionary<string, List<string>>>> oMissingAddons;
+        private readonly Dictionary<string, List<string>> oPurgeAddons;
+        private readonly Dictionary<string, Addon> oAddons;
+        private readonly Dictionary<string, Dictionary<string, Dictionary<string, List<string>>>> oFilesWTF;
+        private readonly Dictionary<string, Dictionary<string, Dictionary<string, List<string>>>> oMissingAddons;
 
-        private List<string> oSavedVariables;
-        private List<string> oSavedVariablesPerCharacter;
-        private List<string> oOrphanSavedVariables;
-        private List<string> oOrphanSavedVariablesPerCharacter;
-        private List<string> oBakFiles;
-        private List<string> oAddonsTxt;
-        private List<string> oMissingAddonsExceptions;
+        private readonly List<string> oSavedVariables;
+        private readonly List<string> oSavedVariablesPerCharacter;
+        private readonly List<string> oOrphanSavedVariables;
+        private readonly List<string> oOrphanSavedVariablesPerCharacter;
+        private readonly List<string> oBakFiles;
+        private readonly List<string> oAddonsTxt;
+        private readonly List<string> oMissingAddonsExceptions;
 
-        private List<string> oAllProperties;
+        private readonly List<string> oAllProperties;
 
-        private ToolStripProgressBar progressBar;
+        private readonly ToolStripProgressBar progressBar;
 
-        private string lang;
+        private readonly string lang;
 
         internal AddonsScanner(string iPath, List<string> missingAddonsExceptions, string lang, ToolStripProgressBar iProgressBar)
         {
-            this.oBasePath = iPath;
+            oBasePath = iPath;
 
             //this.oMainAddons = new IndexedHashSet();
-            this.oOrphanAddons = new HashSet<string>();
+            oOrphanAddons = new HashSet<string>();
 
             //this.oSubAddons = new Dictionary<string, string[]>();
 
-            this.oPurgeAddons = new Dictionary<string, List<string>>();
-            this.oAddons = new Dictionary<string, Addon>();
-            this.oFilesWTF = new Dictionary<string, Dictionary<string, Dictionary<string, List<string>>>>();
-            this.oMissingAddons = new Dictionary<string, Dictionary<string, Dictionary<string, List<string>>>>();
+            oPurgeAddons = new Dictionary<string, List<string>>();
+            oAddons = new Dictionary<string, Addon>();
+            oFilesWTF = new Dictionary<string, Dictionary<string, Dictionary<string, List<string>>>>();
+            oMissingAddons = new Dictionary<string, Dictionary<string, Dictionary<string, List<string>>>>();
 
-            this.oSavedVariables = new List<string>();
-            this.oSavedVariablesPerCharacter = new List<string>();
-            this.oOrphanSavedVariables = new List<string>();
-            this.oOrphanSavedVariablesPerCharacter = new List<string>();
-            this.oBakFiles = new List<string>();
-            this.oAddonsTxt = new List<string>();
-            this.oMissingAddonsExceptions = missingAddonsExceptions;
+            oSavedVariables = new List<string>();
+            oSavedVariablesPerCharacter = new List<string>();
+            oOrphanSavedVariables = new List<string>();
+            oOrphanSavedVariablesPerCharacter = new List<string>();
+            oBakFiles = new List<string>();
+            oAddonsTxt = new List<string>();
+            oMissingAddonsExceptions = missingAddonsExceptions;
 
-            this.oAllProperties = new List<string>();
+            oAllProperties = new List<string>();
 
-            this.progressBar = iProgressBar;
+            progressBar = iProgressBar;
 
             this.lang = lang;
         }
 
         #region Getter
-        private string pathWTF
-        {
-            get
-            {
-                return FileOperations.ResolvePath(this.oBasePath, "WTF", "Account");
-            }
-        }
+        private string pathWTF => FileOperations.ResolvePath(oBasePath, "WTF", "Account");
 
-        private string pathInterface
-        {
-            get
-            {
-                return FileOperations.ResolvePath(this.oBasePath, "Interface", "Addons");
-            }
-        }
+        private string pathInterface => FileOperations.ResolvePath(oBasePath, "Interface", "Addons");
 
         public Dictionary<string, Dictionary<string, Dictionary<string, List<string>>>> filesWTF
         {
@@ -182,7 +170,7 @@ namespace WoWAddonsCleaner
             oBakFiles.Clear();
             oAddonsTxt.Clear();
 
-            foreach (string wAccountDirPath in FileOperations.GetDirectories(this.pathWTF))
+            foreach (string wAccountDirPath in FileOperations.GetDirectories(pathWTF))
             {
                 string wAccountDirName = FileOperations.ExtractFileName(wAccountDirPath);
                 Dictionary<string, Dictionary<string, List<string>>> servers = new Dictionary<string, Dictionary<string, List<string>>>();
@@ -228,7 +216,7 @@ namespace WoWAddonsCleaner
                             {
 
 
-                                var wLines = FileOperations.ReadFile(wAddonsTxtPath);
+                                string[] wLines = FileOperations.ReadFile(wAddonsTxtPath);
 
                                 if (wLines != null)
                                 {
@@ -237,7 +225,7 @@ namespace WoWAddonsCleaner
                                     foreach (string wLine in wLines)
                                     {
                                         string wAddonName = wLine.Replace(": enabled", "").Replace(": disabled", "").ToLower().Trim();
-                                        if (!oAddons.ContainsKey(wAddonName) && !this.oMissingAddonsExceptions.Contains(wAddonName))
+                                        if (!oAddons.ContainsKey(wAddonName) && !oMissingAddonsExceptions.Contains(wAddonName))
                                         {
                                             if (!oMissingAddons.ContainsKey(wAddonName))
                                             {
@@ -316,7 +304,7 @@ namespace WoWAddonsCleaner
         private void scanAddonFolder()
         {
             //DirectoryInfo addonsFolder = new DirectoryInfo(pathInterface);
-            var spliter = new char[] { ',', ' ' };
+            char[] spliter = new char[] { ',', ' ' };
 
 
             //oMainAddons.Clear();
@@ -335,7 +323,7 @@ namespace WoWAddonsCleaner
                     Addon wAddon = new Addon();
 
                     string wTocName = FileOperations.ExtractFileName(wTocPath);
-                    var wLines = FileOperations.ReadFile(wTocPath);
+                    string[] wLines = FileOperations.ReadFile(wTocPath);
                     string title = null;
                     string titleLocalized = null;
                     string plainTitle = null;
@@ -346,7 +334,7 @@ namespace WoWAddonsCleaner
                     string filename = wTocName.Substring(0, wTocName.Length - 4).ToLower();
                     if (wLines != null)
                     {
-                        foreach (var line in wLines)
+                        foreach (string line in wLines)
                         {
                             int wDotPos = line.IndexOf(':') + 1;
 
@@ -365,7 +353,7 @@ namespace WoWAddonsCleaner
                                 title = cleanString(line.Substring(wDotPos));
                             }
 
-                            if (line.StartsWith("## Title-" + this.lang + ":"))
+                            if (line.StartsWith("## Title-" + lang + ":"))
                             {
                                 titleLocalized = cleanString(line.Substring(wDotPos));
                             }
@@ -375,7 +363,7 @@ namespace WoWAddonsCleaner
                                 notes = cleanString(line.Substring(wDotPos));
                             }
 
-                            if (line.StartsWith("## Notes-" + this.lang + ":"))
+                            if (line.StartsWith("## Notes-" + lang + ":"))
                             {
                                 notesLocalized = cleanString(line.Substring(wDotPos));
                             }
@@ -472,7 +460,7 @@ namespace WoWAddonsCleaner
                     string key = wAddon.dependencies[i].Trim();
                     if (oAddons.ContainsKey(key))
                     {
-                        oAddons[key].subAddons.Add(sub.Key, this.oAddons[sub.Key]);
+                        oAddons[key].subAddons.Add(sub.Key, oAddons[sub.Key]);
                     }
                     else if (key.StartsWith("blizzard_"))
                     {
@@ -493,26 +481,26 @@ namespace WoWAddonsCleaner
         #region Actions
         public void clearScan()
         {
-            this.oHasScan = false;
+            oHasScan = false;
         }
 
         public void doScan()
         {
-            this.scanAddonFolder();
-            this.scanWTFFolder();
-            this.checkOrphanAddons();
-            this.oHasScan = true;
+            scanAddonFolder();
+            scanWTFFolder();
+            checkOrphanAddons();
+            oHasScan = true;
         }
 
         public int deleteBakFiles()
         {
-            this.progressBar.Visible = true;
-            this.progressBar.Maximum = oBakFiles.Count;
-            this.progressBar.Value = 0;
+            progressBar.Visible = true;
+            progressBar.Maximum = oBakFiles.Count;
+            progressBar.Value = 0;
 
             FileOperations wFI = new FileOperations(() =>
             {
-                this.progressBar.Value += 1;
+                progressBar.Value += 1;
             });
 
             foreach (string bakFile in oBakFiles)
@@ -523,28 +511,28 @@ namespace WoWAddonsCleaner
 
             wFI.execute();
 
-            this.progressBar.Visible = false;
+            progressBar.Visible = false;
             return oBakFiles.Count;
         }
 
         public void deleteCharacterVariables(string iAccount, string iServer, string iCharacter)
         {
-            this.progressBar.Visible = true;
-            this.progressBar.Maximum = 1;
-            this.progressBar.Value = 0;
+            progressBar.Visible = true;
+            progressBar.Maximum = 1;
+            progressBar.Value = 0;
 
             FileOperations wFI = new FileOperations(() =>
             {
-                this.progressBar.Value += 1;
+                progressBar.Value += 1;
             });
 
-            string wServerAPath = FileOperations.ResolvePath(this.pathWTF, iAccount, iServer, iCharacter);
-            string wServerBPath = FileOperations.ResolvePath(this.pathWTF, iAccount, iServer.Replace('’', '\''), iCharacter);
+            string wServerAPath = FileOperations.ResolvePath(pathWTF, iAccount, iServer, iCharacter);
+            string wServerBPath = FileOperations.ResolvePath(pathWTF, iAccount, iServer.Replace('’', '\''), iCharacter);
 
             if (FileOperations.DirectoryExists(wServerAPath))
             {
 
-                this.progressBar.Maximum += 1;
+                progressBar.Maximum += 1;
                 string wParentPath = FileOperations.GetParent(wServerAPath);
 
                 if (FileOperations.GetDirectories(wParentPath).Count == 1)
@@ -560,7 +548,7 @@ namespace WoWAddonsCleaner
             if (FileOperations.DirectoryExists(wServerBPath))
             {
 
-                this.progressBar.Maximum += 1;
+                progressBar.Maximum += 1;
                 string wParentPath = FileOperations.GetParent(wServerBPath);
 
                 if (FileOperations.GetDirectories(wParentPath).Count == 1)
@@ -574,78 +562,78 @@ namespace WoWAddonsCleaner
             }
 
             wFI.execute();
-            this.progressBar.Visible = false;
+            progressBar.Visible = false;
 
         }
 
         public void deleteServerVariables(string iAccount, string iServer)
         {
 
-            this.progressBar.Visible = true;
-            this.progressBar.Maximum = 1;
-            this.progressBar.Value = 0;
+            progressBar.Visible = true;
+            progressBar.Maximum = 1;
+            progressBar.Value = 0;
 
             FileOperations wFI = new FileOperations(() =>
             {
-                this.progressBar.Value += 1;
+                progressBar.Value += 1;
             });
 
-            string pathServerA = FileOperations.ResolvePath(this.pathWTF, iAccount, iServer);
-            string pathServerB = FileOperations.ResolvePath(this.pathWTF, iAccount, iServer.Replace('’', '\''));
+            string pathServerA = FileOperations.ResolvePath(pathWTF, iAccount, iServer);
+            string pathServerB = FileOperations.ResolvePath(pathWTF, iAccount, iServer.Replace('’', '\''));
 
             if (FileOperations.DirectoryExists(pathServerA))
             {
-                this.progressBar.Maximum += 1;
+                progressBar.Maximum += 1;
                 wFI.deleteDirectory(pathServerA, true);
             }
 
             if (FileOperations.DirectoryExists(pathServerB))
             {
-                this.progressBar.Maximum += 1;
+                progressBar.Maximum += 1;
                 wFI.deleteDirectory(pathServerB, true);
             }
 
             wFI.execute();
-            this.progressBar.Visible = false;
+            progressBar.Visible = false;
         }
 
         public void deleteAddons(List<string> iAddons)
         {
-            this.progressBar.Visible = true;
-            this.progressBar.Maximum = iAddons.Count;
-            this.progressBar.Value = 0;
+            progressBar.Visible = true;
+            progressBar.Maximum = iAddons.Count;
+            progressBar.Value = 0;
 
             FileOperations wFI = new FileOperations(() =>
             {
-                this.progressBar.Value += 1;
+                progressBar.Value += 1;
             });
 
             foreach (string wAddon in iAddons)
             {
-                wFI.deleteDirectory(FileOperations.ResolvePath(this.pathInterface, wAddon), true);
+                wFI.deleteDirectory(FileOperations.ResolvePath(pathInterface, wAddon), true);
             }
 
             wFI.execute();
 
-            this.progressBar.Visible = false;
+            progressBar.Visible = false;
 
         }
 
         public void patchAddonsVersion(List<string> iAddons, string iVersion)
         {
-            this.progressBar.Visible = true;
-            this.progressBar.Maximum = iAddons.Count;
-            this.progressBar.Value = 0;
+            progressBar.Visible = true;
+            progressBar.Maximum = iAddons.Count;
+            progressBar.Value = 0;
 
             FileOperations wFI = new FileOperations(() =>
             {
-                this.progressBar.Value += 1;
+                progressBar.Value += 1;
             });
 
             foreach (string wAddon in iAddons)
             {
                 //FileInfo fi = new FileInfo();
-                string wFullPath = FileOperations.ResolvePath(this.pathInterface, wAddon, wAddon + ".toc");
+                string wFullPath = FileOperations.ResolvePath(pathInterface, wAddon, wAddon + ".toc");
 
                 if (FileOperations.FileExists(wFullPath))
                 {
@@ -678,33 +666,33 @@ namespace WoWAddonsCleaner
             }
 
             wFI.execute();
-            this.progressBar.Visible = false;
+            progressBar.Visible = false;
         }
 
         public void removeMissingAddonsReferences(List<string> iAddons, bool iSort = false)
         {
-            this.progressBar.Visible = true;
-            this.progressBar.Maximum = 1;
-            this.progressBar.Value = 0;
+            progressBar.Visible = true;
+            progressBar.Maximum = 1;
+            progressBar.Value = 0;
 
             FileOperations wFI = new FileOperations(() =>
             {
-                this.progressBar.Value += 1;
+                progressBar.Value += 1;
             });
 
-            foreach (var wAddon in oMissingAddons)
+            foreach (KeyValuePair<string, Dictionary<string, Dictionary<string, List<string>>>> wAddon in oMissingAddons)
             {
                 if (iAddons.Contains(wAddon.Key))
                 {
-                    foreach (var wAccount in wAddon.Value)
+                    foreach (KeyValuePair<string, Dictionary<string, List<string>>> wAccount in wAddon.Value)
                     {
-                        foreach (var wServer in wAccount.Value)
+                        foreach (KeyValuePair<string, List<string>> wServer in wAccount.Value)
                         {
-                            foreach (var wCharacter in wServer.Value)
+                            foreach (string wCharacter in wServer.Value)
                             {
 
                                 string cleanServerName = wServer.Key.Replace('’', '\'');
-                                this.progressBar.Maximum += 2;
+                                progressBar.Maximum += 2;
                                 prepareRemovingMissingAddonsReferences(wAccount.Key, cleanServerName, wCharacter, wAddon.Key.ToLower());
                                 prepareRemovingMissingAddonsReferences(wAccount.Key, wServer.Key.Replace('\'', '’'), wCharacter, wAddon.Key.ToLower());
 
@@ -714,7 +702,7 @@ namespace WoWAddonsCleaner
                 }
             }
 
-            this.progressBar.Value = this.progressBar.Maximum - oPurgeAddons.Count;
+            progressBar.Value = progressBar.Maximum - oPurgeAddons.Count;
 
             foreach (KeyValuePair<string, List<string>> purge in oPurgeAddons)
             {
@@ -724,26 +712,26 @@ namespace WoWAddonsCleaner
                     purge.Value.Sort((x, y) => x.CompareTo(y));
                 }
 
-                wFI.replaceFile(FileOperations.ResolvePath(this.pathWTF, purge.Key), purge.Value);
+                wFI.replaceFile(FileOperations.ResolvePath(pathWTF, purge.Key), purge.Value);
 
             }
 
             wFI.execute();
-            this.progressBar.Visible = false;
+            progressBar.Visible = false;
         }
 
         public void sortAddonsReferences()
         {
-            this.progressBar.Visible = true;
-            this.progressBar.Maximum = this.oAddonsTxt.Count;
-            this.progressBar.Value = 0;
+            progressBar.Visible = true;
+            progressBar.Maximum = oAddonsTxt.Count;
+            progressBar.Value = 0;
 
             FileOperations wFI = new FileOperations(() =>
             {
-                this.progressBar.Value += 1;
+                progressBar.Value += 1;
             });
 
-            foreach (string addonPath in this.oAddonsTxt)
+            foreach (string addonPath in oAddonsTxt)
             {
                 string[] wLines = FileOperations.ReadFile(addonPath);
                 if (wLines != null)
@@ -755,14 +743,14 @@ namespace WoWAddonsCleaner
             }
 
             wFI.execute();
-            this.progressBar.Visible = false;
+            progressBar.Visible = false;
 
         }
 
         private void prepareRemovingMissingAddonsReferences(string iAccount, string iServer, string iCharacter, string iAddon)
         {
             string wFilename = FileOperations.ResolvePath(iAccount, iServer, iCharacter, "AddOns.txt");
-            string wPath = FileOperations.ResolvePath(this.pathWTF, wFilename);
+            string wPath = FileOperations.ResolvePath(pathWTF, wFilename);
 
             if (FileOperations.FileExists(wPath))
             {
@@ -793,13 +781,13 @@ namespace WoWAddonsCleaner
 
         public void deleteWTFFiles(Dictionary<string, string> iWTFFiles)
         {
-            this.progressBar.Visible = true;
-            this.progressBar.Maximum = iWTFFiles.Count * 2;
-            this.progressBar.Value = 0;
+            progressBar.Visible = true;
+            progressBar.Maximum = iWTFFiles.Count * 2;
+            progressBar.Value = 0;
 
             FileOperations wFI = new FileOperations(() =>
             {
-                this.progressBar.Value += 1;
+                progressBar.Value += 1;
             });
 
             foreach (KeyValuePair<string, string> wtf in iWTFFiles)
@@ -809,8 +797,8 @@ namespace WoWAddonsCleaner
 
                     if (wtf.Value == "Global")
                     {
-                        wFI.deleteFile(FileOperations.ResolvePath(this.pathWTF, account.Key, "SavedVariables", wtf.Key + ".lua"));
-                        wFI.deleteFile(FileOperations.ResolvePath(this.pathWTF, account.Key, "SavedVariables", wtf.Key + ".lua.bak"));
+                        wFI.deleteFile(FileOperations.ResolvePath(pathWTF, account.Key, "SavedVariables", wtf.Key + ".lua"));
+                        wFI.deleteFile(FileOperations.ResolvePath(pathWTF, account.Key, "SavedVariables", wtf.Key + ".lua.bak"));
                     }
                     else
                     {
@@ -820,22 +808,22 @@ namespace WoWAddonsCleaner
                             foreach (KeyValuePair<string, List<string>> character in server.Value)
                             {
 
-                                string pathServerA = FileOperations.ResolvePath(this.pathWTF, account.Key, server.Key, character.Key, "SavedVariables");
-                                string pathServerB = FileOperations.ResolvePath(this.pathWTF, account.Key, server.Key.Replace('’', '\''), character.Key, "SavedVariables");
+                                string pathServerA = FileOperations.ResolvePath(pathWTF, account.Key, server.Key, character.Key, "SavedVariables");
+                                string pathServerB = FileOperations.ResolvePath(pathWTF, account.Key, server.Key.Replace('’', '\''), character.Key, "SavedVariables");
 
                                 if (FileOperations.DirectoryExists(pathServerA))
                                 {
                                     wFI.deleteFile(FileOperations.ResolvePath(pathServerA, wtf.Key + ".lua"));
                                     wFI.deleteFile(FileOperations.ResolvePath(pathServerA, wtf.Key + ".lua.bak"));
                                 }
-                                this.progressBar.Value += 2;
+                                progressBar.Value += 2;
 
                                 if (FileOperations.DirectoryExists(pathServerB))
                                 {
                                     wFI.deleteFile(FileOperations.ResolvePath(pathServerB, wtf.Key + ".lua"));
                                     wFI.deleteFile(FileOperations.ResolvePath(pathServerB, wtf.Key + ".lua.bak"));
                                 }
-                                this.progressBar.Value += 2;
+                                progressBar.Value += 2;
                             }
                         }
                     }
@@ -843,7 +831,7 @@ namespace WoWAddonsCleaner
             }
 
             wFI.execute();
-            this.progressBar.Visible = false;
+            progressBar.Visible = false;
         }
 
         #endregion
@@ -854,19 +842,19 @@ namespace WoWAddonsCleaner
     {
         public void AddOrUpdate(string key, HashSet<string> value)
         {
-            if (this.ContainsKey(key))
+            if (ContainsKey(key))
             {
                 this[key].UnionWith(value);
             }
             else
             {
-                this.Add(key, value);
+                Add(key, value);
             }
         }
 
         public void AddOrUpdate(string key, string value)
         {
-            if (this.ContainsKey(key))
+            if (ContainsKey(key))
             {
                 if (!this[key].Contains(value))
                 {
@@ -876,7 +864,7 @@ namespace WoWAddonsCleaner
             }
             else
             {
-                this.Add(key, new HashSet<string>());
+                Add(key, new HashSet<string>());
                 this[key].Add(value);
             }
         }
