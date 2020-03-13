@@ -112,21 +112,1522 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="folderBrowserDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="folderBrowserDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="ctmAllAddons.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtWoWFolder.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="txtWoWFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="txtWoWFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>737, 20</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtWoWFolder.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtWoWFolder.Name" xml:space="preserve">
+    <value>txtWoWFolder</value>
+  </data>
+  <data name="&gt;&gt;txtWoWFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtWoWFolder.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtWoWFolder.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnSearchWoW.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnSearchWoW.Location" type="System.Drawing.Point, System.Drawing">
+    <value>755, 12</value>
+  </data>
+  <data name="btnSearchWoW.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 20</value>
+  </data>
+  <data name="btnSearchWoW.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnSearchWoW.Text" xml:space="preserve">
+    <value>Choisir le dossier</value>
+  </data>
+  <data name="&gt;&gt;btnSearchWoW.Name" xml:space="preserve">
+    <value>btnSearchWoW</value>
+  </data>
+  <data name="&gt;&gt;btnSearchWoW.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSearchWoW.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSearchWoW.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnScanAddons.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnScanAddons.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnScanAddons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>755, 38</value>
+  </data>
+  <data name="btnScanAddons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 23</value>
+  </data>
+  <data name="btnScanAddons.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnScanAddons.Text" xml:space="preserve">
+    <value>Scan des addons</value>
+  </data>
+  <data name="&gt;&gt;btnScanAddons.Name" xml:space="preserve">
+    <value>btnScanAddons</value>
+  </data>
+  <data name="&gt;&gt;btnScanAddons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnScanAddons.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnScanAddons.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tabControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btnDelete.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>625, 291</value>
+  </data>
+  <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 23</value>
+  </data>
+  <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btnDelete.Text" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
+    <value>btnDelete</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnAutoClean.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnAutoClean.Location" type="System.Drawing.Point, System.Drawing">
+    <value>625, 320</value>
+  </data>
+  <data name="btnAutoClean.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 23</value>
+  </data>
+  <data name="btnAutoClean.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btnAutoClean.Text" xml:space="preserve">
+    <value>AutoClean</value>
+  </data>
+  <data name="&gt;&gt;btnAutoClean.Name" xml:space="preserve">
+    <value>btnAutoClean</value>
+  </data>
+  <data name="&gt;&gt;btnAutoClean.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAutoClean.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;btnAutoClean.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblDescription.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="lblDescription.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="lblDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>625, 72</value>
+  </data>
+  <data name="lblDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 206</value>
+  </data>
+  <data name="lblDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblDescription.Text" xml:space="preserve">
+    <value>Description: </value>
+  </data>
+  <data name="&gt;&gt;lblDescription.Name" xml:space="preserve">
+    <value>lblDescription</value>
+  </data>
+  <data name="&gt;&gt;lblDescription.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDescription.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;lblDescription.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblAuthor.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="lblAuthor.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="lblAuthor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>625, 52</value>
+  </data>
+  <data name="lblAuthor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 20</value>
+  </data>
+  <data name="lblAuthor.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblAuthor.Text" xml:space="preserve">
+    <value>Auteur: </value>
+  </data>
+  <data name="&gt;&gt;lblAuthor.Name" xml:space="preserve">
+    <value>lblAuthor</value>
+  </data>
+  <data name="&gt;&gt;lblAuthor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAuthor.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;lblAuthor.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblVersion.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="lblVersion.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="lblVersion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>625, 32</value>
+  </data>
+  <data name="lblVersion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 20</value>
+  </data>
+  <data name="lblVersion.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblVersion.Text" xml:space="preserve">
+    <value>Version: </value>
+  </data>
+  <data name="&gt;&gt;lblVersion.Name" xml:space="preserve">
+    <value>lblVersion</value>
+  </data>
+  <data name="&gt;&gt;lblVersion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblVersion.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;lblVersion.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblTitle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="lblTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14pt</value>
+  </data>
+  <data name="lblTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>625, 7</value>
+  </data>
+  <data name="lblTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 25</value>
+  </data>
+  <data name="lblTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.Name" xml:space="preserve">
+    <value>lblTitle</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labelHelpPatch.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="labelHelpPatch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>626, 375</value>
+  </data>
+  <data name="labelHelpPatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 33</value>
+  </data>
+  <data name="labelHelpPatch.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="labelHelpPatch.Text" xml:space="preserve">
+    <value>Patch les addons sélectionné pour leur indiquer être fait pour la dernière version</value>
+  </data>
+  <data name="&gt;&gt;labelHelpPatch.Name" xml:space="preserve">
+    <value>labelHelpPatch</value>
+  </data>
+  <data name="&gt;&gt;labelHelpPatch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelHelpPatch.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;labelHelpPatch.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnPatchVersion.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnPatchVersion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>625, 349</value>
+  </data>
+  <data name="btnPatchVersion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 23</value>
+  </data>
+  <data name="btnPatchVersion.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnPatchVersion.Text" xml:space="preserve">
+    <value>Patcher</value>
+  </data>
+  <data name="&gt;&gt;btnPatchVersion.Name" xml:space="preserve">
+    <value>btnPatchVersion</value>
+  </data>
+  <data name="&gt;&gt;btnPatchVersion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPatchVersion.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;btnPatchVersion.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="listAllAddons.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="allAddonsName.Text" xml:space="preserve">
+    <value>Addons</value>
+  </data>
+  <data name="allAddonsVersion.Text" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="allAddonsAutoClean.Text" xml:space="preserve">
+    <value>Auto-Clean Actif ?</value>
+  </data>
+  <data name="allAddonsAutoClean.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <metadata name="ctmAllAddons.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>451, 17</value>
   </metadata>
-  <metadata name="ctmAddonReference.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="tsmiPatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 22</value>
+  </data>
+  <data name="tsmiPatch.Text" xml:space="preserve">
+    <value>Patcher</value>
+  </data>
+  <data name="tsmiAddToDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 22</value>
+  </data>
+  <data name="tsmiAddToDelete.Text" xml:space="preserve">
+    <value>Ajouter aux Addons à supprimer</value>
+  </data>
+  <data name="tsmiRemoveToDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 22</value>
+  </data>
+  <data name="tsmiRemoveToDelete.Text" xml:space="preserve">
+    <value>Enlever des Addons à supprimer</value>
+  </data>
+  <data name="tsmiRemoveToDelete.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ctmAllAddons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 70</value>
+  </data>
+  <data name="&gt;&gt;ctmAllAddons.Name" xml:space="preserve">
+    <value>ctmAllAddons</value>
+  </data>
+  <data name="&gt;&gt;ctmAllAddons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="listAllAddons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 7</value>
+  </data>
+  <data name="listAllAddons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>612, 401</value>
+  </data>
+  <data name="listAllAddons.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;listAllAddons.Name" xml:space="preserve">
+    <value>listAllAddons</value>
+  </data>
+  <data name="&gt;&gt;listAllAddons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listAllAddons.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;listAllAddons.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="tabPage4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>862, 411</value>
+  </data>
+  <data name="tabPage4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabPage4.Text" xml:space="preserve">
+    <value>Tout les addons</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Name" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;listOrphanAddons.Name" xml:space="preserve">
+    <value>listOrphanAddons</value>
+  </data>
+  <data name="&gt;&gt;listOrphanAddons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listOrphanAddons.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;listOrphanAddons.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteOrphanAddons.Name" xml:space="preserve">
+    <value>btnDeleteOrphanAddons</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteOrphanAddons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteOrphanAddons.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteOrphanAddons.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>862, 411</value>
+  </data>
+  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Addons orphelins</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteCharacter.Name" xml:space="preserve">
+    <value>btnDeleteCharacter</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteCharacter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteCharacter.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteCharacter.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;treeCharacters.Name" xml:space="preserve">
+    <value>treeCharacters</value>
+  </data>
+  <data name="&gt;&gt;treeCharacters.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;treeCharacters.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;treeCharacters.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>862, 411</value>
+  </data>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Personnages</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnOrderWTF.Name" xml:space="preserve">
+    <value>btnOrderWTF</value>
+  </data>
+  <data name="&gt;&gt;btnOrderWTF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnOrderWTF.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;btnOrderWTF.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteBakFile.Name" xml:space="preserve">
+    <value>btnDeleteBakFile</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteBakFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteBakFile.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteBakFile.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;listWTF.Name" xml:space="preserve">
+    <value>listWTF</value>
+  </data>
+  <data name="&gt;&gt;listWTF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listWTF.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;listWTF.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteOrphanWTF.Name" xml:space="preserve">
+    <value>btnDeleteOrphanWTF</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteOrphanWTF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteOrphanWTF.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteOrphanWTF.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>862, 411</value>
+  </data>
+  <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Fichiers de config orphelins</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnShowExceptions.Name" xml:space="preserve">
+    <value>btnShowExceptions</value>
+  </data>
+  <data name="&gt;&gt;btnShowExceptions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnShowExceptions.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;btnShowExceptions.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnSortAllAddonsTxt.Name" xml:space="preserve">
+    <value>btnSortAllAddonsTxt</value>
+  </data>
+  <data name="&gt;&gt;btnSortAllAddonsTxt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSortAllAddonsTxt.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;btnSortAllAddonsTxt.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;chkSortAddonsTxt.Name" xml:space="preserve">
+    <value>chkSortAddonsTxt</value>
+  </data>
+  <data name="&gt;&gt;chkSortAddonsTxt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkSortAddonsTxt.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;chkSortAddonsTxt.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;listMissingAddons.Name" xml:space="preserve">
+    <value>listMissingAddons</value>
+  </data>
+  <data name="&gt;&gt;listMissingAddons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listMissingAddons.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;listMissingAddons.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteMissingAddons.Name" xml:space="preserve">
+    <value>btnDeleteMissingAddons</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteMissingAddons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteMissingAddons.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteMissingAddons.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tabPage5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>862, 411</value>
+  </data>
+  <data name="tabPage5.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tabPage5.Text" xml:space="preserve">
+    <value>Addons manquant</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.Name" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tabControl.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 68</value>
+  </data>
+  <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>870, 437</value>
+  </data>
+  <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Name" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="listOrphanAddons.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="listOrphanAddons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 7</value>
+  </data>
+  <data name="listOrphanAddons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>716, 401</value>
+  </data>
+  <data name="listOrphanAddons.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;listOrphanAddons.Name" xml:space="preserve">
+    <value>listOrphanAddons</value>
+  </data>
+  <data name="&gt;&gt;listOrphanAddons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listOrphanAddons.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;listOrphanAddons.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Addon.Text" xml:space="preserve">
+    <value>Addons</value>
+  </data>
+  <data name="Addon.Width" type="System.Int32, mscorlib">
+    <value>268</value>
+  </data>
+  <data name="btnDeleteOrphanAddons.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnDeleteOrphanAddons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>729, 7</value>
+  </data>
+  <data name="btnDeleteOrphanAddons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 23</value>
+  </data>
+  <data name="btnDeleteOrphanAddons.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnDeleteOrphanAddons.Text" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteOrphanAddons.Name" xml:space="preserve">
+    <value>btnDeleteOrphanAddons</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteOrphanAddons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteOrphanAddons.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteOrphanAddons.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnDeleteCharacter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnDeleteCharacter.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnDeleteCharacter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>729, 6</value>
+  </data>
+  <data name="btnDeleteCharacter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 23</value>
+  </data>
+  <data name="btnDeleteCharacter.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnDeleteCharacter.Text" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteCharacter.Name" xml:space="preserve">
+    <value>btnDeleteCharacter</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteCharacter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteCharacter.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteCharacter.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="treeCharacters.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="treeCharacters.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 7</value>
+  </data>
+  <data name="treeCharacters.Size" type="System.Drawing.Size, System.Drawing">
+    <value>716, 402</value>
+  </data>
+  <data name="treeCharacters.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;treeCharacters.Name" xml:space="preserve">
+    <value>treeCharacters</value>
+  </data>
+  <data name="&gt;&gt;treeCharacters.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;treeCharacters.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;treeCharacters.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnOrderWTF.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnOrderWTF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>729, 64</value>
+  </data>
+  <data name="btnOrderWTF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 23</value>
+  </data>
+  <data name="btnOrderWTF.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnOrderWTF.Text" xml:space="preserve">
+    <value>Ordonner les variables</value>
+  </data>
+  <data name="btnOrderWTF.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnOrderWTF.Name" xml:space="preserve">
+    <value>btnOrderWTF</value>
+  </data>
+  <data name="&gt;&gt;btnOrderWTF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnOrderWTF.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;btnOrderWTF.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnDeleteBakFile.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnDeleteBakFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>729, 35</value>
+  </data>
+  <data name="btnDeleteBakFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 23</value>
+  </data>
+  <data name="btnDeleteBakFile.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnDeleteBakFile.Text" xml:space="preserve">
+    <value>Suppression des *.bak</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteBakFile.Name" xml:space="preserve">
+    <value>btnDeleteBakFile</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteBakFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteBakFile.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteBakFile.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="listWTF.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="listWTF.Groups" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAAZHbG9iYWwF/P///yhTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AQAA
+        AAd2YWx1ZV9fAAgCAAAAAAAAAAoGBQAAABNsaXN0Vmlld0dyb3VwR2xvYmFsCw==
+</value>
+  </data>
+  <data name="listWTF.Groups1" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAAlDaGFyYWN0ZXIF/P///yhTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50
+        AQAAAAd2YWx1ZV9fAAgCAAAAAAAAAAoGBQAAABZsaXN0Vmlld0dyb3VwQ2hhcmFjdGVyCw==
+</value>
+  </data>
+  <data name="listWTF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 7</value>
+  </data>
+  <data name="listWTF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>716, 398</value>
+  </data>
+  <data name="listWTF.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;listWTF.Name" xml:space="preserve">
+    <value>listWTF</value>
+  </data>
+  <data name="&gt;&gt;listWTF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listWTF.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;listWTF.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="file.Text" xml:space="preserve">
+    <value>Fichier</value>
+  </data>
+  <data name="typeFile.Text" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="btnDeleteOrphanWTF.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnDeleteOrphanWTF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>729, 6</value>
+  </data>
+  <data name="btnDeleteOrphanWTF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 23</value>
+  </data>
+  <data name="btnDeleteOrphanWTF.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnDeleteOrphanWTF.Text" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteOrphanWTF.Name" xml:space="preserve">
+    <value>btnDeleteOrphanWTF</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteOrphanWTF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteOrphanWTF.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteOrphanWTF.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnShowExceptions.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnShowExceptions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>728, 88</value>
+  </data>
+  <data name="btnShowExceptions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 23</value>
+  </data>
+  <data name="btnShowExceptions.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btnShowExceptions.Text" xml:space="preserve">
+    <value>Voir les exceptions</value>
+  </data>
+  <data name="&gt;&gt;btnShowExceptions.Name" xml:space="preserve">
+    <value>btnShowExceptions</value>
+  </data>
+  <data name="&gt;&gt;btnShowExceptions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnShowExceptions.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;btnShowExceptions.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnSortAllAddonsTxt.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnSortAllAddonsTxt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>728, 59</value>
+  </data>
+  <data name="btnSortAllAddonsTxt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 23</value>
+  </data>
+  <data name="btnSortAllAddonsTxt.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btnSortAllAddonsTxt.Text" xml:space="preserve">
+    <value>Trier tout les fichiers</value>
+  </data>
+  <data name="&gt;&gt;btnSortAllAddonsTxt.Name" xml:space="preserve">
+    <value>btnSortAllAddonsTxt</value>
+  </data>
+  <data name="&gt;&gt;btnSortAllAddonsTxt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSortAllAddonsTxt.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;btnSortAllAddonsTxt.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chkSortAddonsTxt.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="chkSortAddonsTxt.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkSortAddonsTxt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>731, 36</value>
+  </data>
+  <data name="chkSortAddonsTxt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 17</value>
+  </data>
+  <data name="chkSortAddonsTxt.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="chkSortAddonsTxt.Text" xml:space="preserve">
+    <value>Trier les addons</value>
+  </data>
+  <data name="&gt;&gt;chkSortAddonsTxt.Name" xml:space="preserve">
+    <value>chkSortAddonsTxt</value>
+  </data>
+  <data name="&gt;&gt;chkSortAddonsTxt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkSortAddonsTxt.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;chkSortAddonsTxt.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="listMissingAddons.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Addons</value>
+  </data>
+  <metadata name="ctmAddonReference.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>296, 17</value>
   </metadata>
-  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="ctmAddonReference.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 26</value>
+  </data>
+  <data name="&gt;&gt;ctmAddonReference.Name" xml:space="preserve">
+    <value>ctmAddonReference</value>
+  </data>
+  <data name="&gt;&gt;ctmAddonReference.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="listMissingAddons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="listMissingAddons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>716, 398</value>
+  </data>
+  <data name="listMissingAddons.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;listMissingAddons.Name" xml:space="preserve">
+    <value>listMissingAddons</value>
+  </data>
+  <data name="&gt;&gt;listMissingAddons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listMissingAddons.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;listMissingAddons.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tsmiExclude.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
+  </data>
+  <data name="tsmiExclude.Text" xml:space="preserve">
+    <value>Ignorer cet addon</value>
+  </data>
+  <data name="btnDeleteMissingAddons.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnDeleteMissingAddons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>728, 6</value>
+  </data>
+  <data name="btnDeleteMissingAddons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 23</value>
+  </data>
+  <data name="btnDeleteMissingAddons.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnDeleteMissingAddons.Text" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteMissingAddons.Name" xml:space="preserve">
+    <value>btnDeleteMissingAddons</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteMissingAddons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteMissingAddons.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteMissingAddons.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>180, 17</value>
   </metadata>
+  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 514</value>
+  </data>
+  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>895, 22</value>
+  </data>
+  <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="statusStrip1.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="progressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 16</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>895, 536</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAQEAAAAEAIAAoQgAAFgAAACgAAABAAAAAgAAAAAEAIAAAAAAAAEAAABILAAASCwAAAAAAAAAA
+        AAA7OE7/Pj9U/0FEWf87RVn/MEJV/yZBU/8kRlb/KExc/ypTYP8dQ1H/HUBN/ydEUf8oPkv/IS47/yAl
+        Mv8pJDP/Myo4/yYhM/8iL0b/GThT/xtIY/8ZUGn/BEde/xhsgv8kfJL/EGJ6/xZkff8sfZf/KoCZ/xt0
+        i/8dd4//FGyE/w9gef8JX3f/Ioyf/yeis/8QjKH/AHSO/wF3kv8GfZr/NLHO/y6lwv8MaIb/CFFv/xVO
+        av8ZPFf/IjRM/0BJXf9ASFr/PkpZ/z5OW/84TVn/OU5b/0BSYf8/T1z/NkNR/zA8Sf8tN0H/KzU//ygx
+        O/8jLTX/ISsy/yYuNf8sNTn/S05j/0VLX/89RVn/N0RX/zVHWv80TF7/ME1d/yZFVv8bPk3/JkdV/yVE
+        Uv8mQlD/IThG/xoqOP8gKzn/IiY1/yAhL/8kKjv/IzZO/y5RbP83Z4H/KWR9/xZddf8qgJb/KoOY/w9j
+        e/8TYnz/LoGa/yyGnf8TcIf/EnCH/x57kv8ziaH/C2Z9/xWClv8cmaz/DIed/wqCnP8jpcH/KarH/0/O
+        6/85sc//DmiG/wBGY/8UTmv/I0pl/x8ySv89Rlr/QUtd/z9LWv86S1j/N0xY/ztPXP9BUWH/P05d/zdE
+        Uv8xPUn/LTdC/ys1P/8oMjv/JC02/yEqMf8jKzL/JS4z/0VWaP9FV2j/QVNl/ztMXv8zRVb/LEBR/yg9
+        Tv8nO0z/JjtL/yg+Tv8mPE3/Jj1N/x42Rf8VLDv/FCo6/wsiMf8UKjn/IDtN/xU5UP8rWXT/PXSP/yZn
+        gf8TX3j/KoGZ/yqDm/8KXnf/Blpy/yF6kv8igpr/DXOK/w93jv8SeJD/LYuj/wpof/8CZXn/LqW5/0rP
+        4/9IzOP/R8/r/zC20/86vNn/NK7N/xiBoP8EVHP/DEhm/xpEYf8cMUr/NT9U/0JMX/8/S1z/N0hX/zdL
+        Wf8+T17/QU5f/z9KW/85RVP/Mj5K/y04Qv8sNkD/KzQ+/ygxOf8jLDP/Iiow/yIrL/80UV//NVJg/zVP
+        Xv8xR1f/LD5P/yg3Sf8pNkj/LTdK/y85TP8oNEf/JjVI/x4yRf8TLkD/DCw9/wQmN/8FKjn/Ll9u/zVr
+        fP8aU2n/JWJ7/zN1j/8fZ4H/C1x1/yB5kf8sh5//DmV9/wFXb/8Yd47/I46k/xOEmf8FdIn/BWd8/yOL
+        ov85pLr/EHSJ/y2luv9e6f7/UNnw/yKnxP8Tjqz/EYyp/ySfvv8nm7n/D2yK/wZKaf8TQV//GjNM/yo3
+        Tf89SVz/Pkxd/zZKWv85Tl3/P09f/z9JW/89Rlf/OEJQ/zI9Sf8vOUT/LjhC/y84Qf8sNT7/JzA4/yQs
+        Mv8iKy//H0RQ/x5CTf8fPkr/IztJ/yo6S/8xO03/NDpN/zE0R/8rLEL/JStB/yIuRP8TKD7/CixB/w48
+        T/8MQ1T/EFBf/06drP9QorP/LHqQ/x9qhP8hbYj/GmqE/xRqg/8fe5P/KYef/x96kv8HY3v/GYGY/y6k
+        uf8blqn/AnWJ/xOEmP9Duc3/Ztzy/yCWqv8Qk6f/PMff/zrC3v8Ag6D/AXqZ/wiAoP8hnr7/L6bF/xV5
+        l/8HU3L/F0pn/xw4U/8gL0f/MkJW/zpLXf83Tl7/OlJi/z1OX/88RVj/O0NU/zU+TP8xPUn/MTxG/zE7
+        Rf8xOkT/LjZA/ykxOv8mLjT/JCwy/xE4Qf8SOEH/FzdB/x82Q/8oN0b/MDdI/zAzRv8qKj7/ICE3/x0k
+        O/8YKD//ES5F/xRBV/8nZXn/NIOW/yOBkv9Frb3/U73P/zSWrP8Ubof/C2J7/xVthv8mgZr/Joef/xh2
+        jv8riaH/Dm2E/xyLof87vdD/MbvM/x2nt/83ydv/Z+z7/1ja7f8qtsn/B5aq/xahuf8utdL/G527/w2M
+        rv8WlLb/JaPF/y+nyP8cg6P/EGGA/xtTcf8fP1z/Gy1H/yc5T/8zR1n/N1Fh/zpVZf86Tl//OUNX/zlB
+        U/8yPEr/MT1J/zM9SP8zPUf/MTtE/yw1Pv8nMDj/JS00/yMrM/8ZNT//HTlC/yA4Qv8gMj7/His4/x0m
+        Nf8cJDX/HSU4/xomPP8XK0H/EjFH/xtIXv8mY3j/PYqe/1i1yf8smKn/GY2e/0O6zf81o7n/EniP/wRk
+        ff8ScYr/K42l/y+Sqv8GYHj/I4Sc/wxlfP8aiZ3/RNHj/1bx//9N8f3/ROPz/1Hg8/8uus3/RNfr/yi+
+        1P8Ej6j/HJu4/0PB4f8mosT/GpW4/xqYuv8spMX/LZa4/x5zk/8aVnT/I0Zk/x0zTv8dM0n/KEFT/zJQ
+        Yf82VmX/OE9g/zpGWf85QVP/MDtJ/zE9Sf8zPkj/MjxG/zA5Q/8rND3/Ji83/yQsM/8iKjH/LjlD/yk1
+        P/8hLDb/GCQv/xMgLf8VJDP/Gy4+/x84SP8dPVD/JU5h/x1RZP8iY3b/I3KG/zKOof9Rucz/IJCk/wZ0
+        iP88tMj/PrTK/yGQqP8Zgpr/H4Sd/yKHoP8+p7//DHSM/ySMpP8ObIT/FYqf/zbK3P9G6/n/O+j3/xfB
+        0f8assb/CZyw/zLL3/830ej/E5Gr/xV7m/9KxOf/Rr/j/x2Vuf8Ri6//H5a5/zGcvv8pgaL/Glp5/yZM
+        af8kP1j/GDBH/xw4S/8oSlv/MVNj/zdRY/88S1//OUNV/zA7Sf8xPUn/MjxG/zE7RP8vOEL/LDU+/ykx
+        Ov8mLjX/Iiox/xwqNv8aKTX/FyQy/xMiMP8SJjP/FzFA/yFDU/8pVmf/LWFz/zZtgf8paX3/IG+D/xl3
+        iv8njqL/SbTK/x+Ppf8Feo//NKzC/zmwxv8flKv/IJSr/yORqP8QepD/RcLX/zKwxf87tcr/H5qw/waE
+        mP8jsMP/TO///zfl9f8Ou8z/A5is/wCRpf8cuM3/Ptzz/ymqxf8Fbo7/I5y//0e/4/8SjLD/CoSo/w+G
+        qf8smLv/NZO1/yNsjP8eUG7/JUll/xYwSv8YMEf/JUNW/zBPYf84UmT/PFBi/zdGV/8vPEn/LztG/y86
+        RP8uOUL/LzlC/y84Qf8tNj7/KTE4/yUtNP8FJDH/Bik2/xo6SP8uS1z/OFls/zRfcf8uZXf/QoaZ/yRr
+        gP8mZn3/OHyT/zGHnv8eh5z/H46i/zajuP9BrcP/CW+F/zuswf8/tcr/Fo6j/yiluf9Gy9//F6e4/xy8
+        zP8/4vH/UOn3/yy/0f8Jgpf/C4Wb/ya+1P803PD/Kdfq/wSjuf8Aorj/BKe//zTR6P88x+L/EIWn/wp4
+        m/8mo8b/H53A/xCIrv8Shqv/JZW5/ymRtP8ac5T/GF19/yhZd/8eOVf/Hi5J/ys7Uv82Sl3/O1Nj/zxW
+        ZP82T1r/MENM/y08RP8qN0D/LTlA/y86Qf8vOED/LDQ7/ykxOP8oMDf/CEBO/yBXZf8mV2b/Ml9y/z5s
+        gf8tYHX/F1Zr/0GSp/8xhpv/G2R9/yt4kf8si6P/IZGn/xyRpv8mlqz/RbLJ/xF3jv8/rcL/VdDk/yKa
+        rP8Xlqj/PdHj/y7Q3/8Sws//J9zp/z/u/P853e7/H6m+/wh9lf8Vla3/Pt71/zTd8/8bxdz/BKa9/wCe
+        uP8gvdj/Ps/s/ymkxf8BZ4r/C3qe/yOcwP8XjLP/Cnyj/xGBqP8jj7P/IYOl/w9fgf8fWnv/GTtb/yU3
+        Vf8nNE3/OEZa/0FWZv84VGH/NVFa/y9ETP8sPUT/KTc//y04QP8xOUH/MDhA/y01Pf8sMzv/LDQ7/xdh
+        bv8haHb/JWh2/ytoev8xZ3z/IlVr/wtIX/8tfJP/OJKo/xFogf8ifZX/KpCn/yycs/8rorj/Ipuw/zyv
+        xP8Pdo3/K5et/07V6P8+0+H/HbXD/ybA0f9I5fX/Ndvp/xvI1v836/f/Q/D//y7C1/8Og5z/B2+J/ySh
+        vP8+2/P/L9ry/wiqwv8An7r/C6fE/yzC4P83wuH/DYOl/wRpjv8nk7n/JJK6/wp4oP8Ec5n/HIet/yyM
+        sf8ebpL/H1+A/xlIaP8ePlv/GjBJ/y49VP9AUWP/P1Rj/zpQXP8zRU//Lj1G/yo4QP8tN0H/MThC/zI4
+        Qf8wNj//LzY//zA4QP8bbHr/FmZ0/yBvff8mbn7/KmV5/yFSaf8KQVr/Im6G/zeTqv8LbIP/G4Wb/yGQ
+        p/8tn7b/M67E/xqdsf83s8f/GYGY/xB7kv86zN3/R/X//zLf7P8pydn/Pdbn/0be7/8bu8r/IdDd/zTi
+        8P860OX/I5+4/wVuiv8Jco//NMPd/0Pm+f8VvNP/BqjC/wGcuf8OqMX/KcDe/yetzf8EaY//G32l/yqR
+        uv8Wgar/DHif/xqBp/8tirD/M4On/yhtj/8gW3r/EUFd/xEyS/8hNUz/OUdc/0dVZ/9BT1//OEhU/zNB
+        TP8uOkb/LzhE/zE4RP8zOEP/MjdB/zE3Qv8yOUP/F2R1/x5tff8ic4L/JHGC/zNxhv8tXHX/BjxW/yZy
+        i/8wjaX/EXyS/xOLoP8Vj6X/L6nA/zzA1f8Xprr/Nb7S/zuvx/8MfpX/JrrM/znm9P8/7/z/PeX0/yfJ
+        2f8rxdb/ILzM/wmqvP8gwNL/PNHl/za+1v8Xkaz/A3WT/xqbt/9C2Or/LtDn/xS20f8IpsP/AZ67/xWv
+        zf84w+P/CHed/wZpkv8ihrD/JIqz/xyDq/8YfKT/IH6k/zGIrP8vfZ//H2SD/xBKZv8SOlX/HDVO/zBA
+        WP9DT2X/QU1f/zxMWv83RlL/Mz9N/zI6Sf8zOUf/NDlF/zM4RP8zOUT/NDpG/xpecf8ocIL/JnSG/yd0
+        h/9BgZf/O22I/wg/Wv8rd5H/IIGa/yGasP8jqbz/JavA/z3D2f9M3O//Mczf/zHI3P9S2vD/IKa9/wyZ
+        rf8pxdb/Qu37/0Py//835PT/E7rL/yjH2f8WqL3/Ia/E/yS3zP8qvdP/KK7I/wyAn/8OhKP/HKXD/zzT
+        8P8oyOX/FrrX/wyvzP8Vsc//M8Lj/x+cwv8Jd6D/F3ym/ymIsv8khK7/Fnih/xJ1nP8dfqH/LIWn/xhk
+        hP8YVnT/GEVi/x08V/8qPlj/N0Ve/z1JXv89S13/OEhW/zZBUf80PUz/NTtK/zY6SP82Okj/NTtI/zY8
+        Sf8kZXr/Jmp//yVvhf8ve5H/Poad/y1pg/8JQFv/MoKc/yqNpf8loLb/UNvq/1Lg8f8svNH/JrzP/0Hf
+        8f8mxdf/M83h/zjP5P8Si6H/BYmf/yXB1v9F6Pv/Puf5/yLM3v8cv9H/HKvB/xaftf8Xq8D/I73T/zLA
+        2v8xqcj/CoCh/weOrv8yyOX/NtXx/yDD4P8Orsz/CqPB/xqrzP87w+f/JqPJ/xF8pf8lhrH/LYy3/yeK
+        s/8ehaz/FX6i/yaGqP8gcJH/GFh4/xxNbP8aP13/HzlW/yxAW/81RVz/OUlb/zdGVv82QVL/NT9N/zU8
+        S/83O0r/ODxK/zc9Sv83PUr/MXKJ/zp9lP8qcIj/LXmS/zeLo/8jbob/CEBZ/zGGoP9ZvNX/SsTb/1Xf
+        8/9c7f//Nsvf/wqgtf8Ppbr/J8PX/0Xr+P9F7f3/H7nP/wWCm/8MhJ7/NLzU/1To+f8nzN//ELbI/xar
+        wP8PnbT/BZuy/w+sw/8ludL/JqvI/xGVs/8ElLL/DqjG/znW7/8uyub/EajJ/wqdvf8Upsb/OMvt/zzF
+        6f8Pg6z/EHij/xuAq/8agqr/F4Sp/xqIq/8dgKP/MoKm/xxdf/8cUHH/FkFh/xU3V/8hPFn/K0FZ/zNH
+        Wf81RVX/NUNR/zU/Tf82PUv/NzxK/zY8Sf82PEj/NDpF/zN9l/8zfpj/ImyG/xZngP8zlKv/Qa/E/w9t
+        hP8SUGr/acbg/2/n+f8zvdD/LsDV/0re8f83x9r/AY2m/w+ku/8iy97/Qu/6/0jr+v8ouM//CYGe/xSC
+        oP83ttD/K8DX/xq4zP8Mprr/CaC1/wagt/8MqL//HrjP/yu/2f8ZrMf/A4yp/wGSsf8XrMz/HrPV/xWn
+        yv8Nn8L/D6HE/xKnyf89y+7/GZe+/wV5ov8Pf6f/FoWt/xWEq/8YhKn/E3ea/zaKrv8obZH/FlFy/xZI
+        aP8TPV3/EDFQ/x86VP8vRlj/NEZW/zREUv80QU3/ND5L/zU7SP80OkX/MjhD/zA3QP8oi6L/M5Gq/xRl
+        f/8TaoP/N6m//0rV6P8xqb7/BUJc/yJphP9e1On/KbbK/xOjuf8rtsz/MrTM/yCcuP8WnLf/CKK6/yjR
+        5P8y4PP/LdDo/x2jwP8ObpD/EGOE/yKWtP8qr8n/Fa/E/wyvwv8Lq8D/DqrC/xa2zf8Zv9b/DrLL/wab
+        uP8Bjq3/EZ2//yOv1P8crtL/CaDD/wWavf8Mmr7/LLXa/yOpz/8LjbT/BICo/xCGrv8birH/GYCn/xp8
+        of8ng6f/L4Cj/x5khf8TTW3/ED9g/xM4V/8iPln/OFBk/zhNXP81RlP/MT9M/zA7Rv8vOEL/LzdA/zA3
+        P/8uNj7/IJWr/0Gwxv8nh5//EXCI/ymitv9H2uz/Q8ba/zaNpv8HSWP/IYef/zzC1/8st83/Gp22/yOd
+        uP8uoL7/KqTB/xelv/8WuNH/G83l/yPU7P8wxuP/Kpi6/wxhhP8RcJL/IZKx/xyvx/8Ms8X/CqzB/wun
+        vv8HqsH/BrXM/wq2z/8Vrsz/CZO1/wuPtP8epsz/HbHV/wqoyv8IocT/DZm+/xifxf8gq9H/FJ/F/waK
+        sP8Mhaz/G4mx/x6Dqv8egKb/GHue/y2KrP8reZv/HVt8/xZHaP8ZPl//JEJd/zxWav81TVz/L0JP/yw8
+        Sf8uOkX/LzhB/y02Pf8sNTr/KjI3/xuWrf9JwNX/SbjO/xl7kv8PfJL/N7zQ/1jV6v9hyeL/FHCJ/wFY
+        cf8yqb//RM3j/yyyyv8cmLL/KZe1/y+hv/8wtND/F6/K/x3K5P8e0+3/KtPu/zjI5/8imrv/BGSG/wxs
+        jP8mqsX/GLHI/wqnvf8Eobj/Aaa8/wWyyv8Lscz/HqvM/yChxv8OkLf/DZa8/xOozf8QsdT/DarN/w6d
+        wv8Ol73/FaDG/xqkyv8ZmsH/FIuz/xiHrv8ii7H/HYSo/x2GqP8liKn/Kn2f/zByk/8pWnz/Gz1g/yM+
+        W/85VGn/LEZV/yU7SP8oOUb/LTtG/zA6Qv8tNz3/KjM2/yUuMP8OgZn/NqzE/1XK4f83n7f/FHqS/ymV
+        rf9Uwdn/TLnR/zSiuv8ZeZP/D3uU/zGyyv8+yeD/KKnD/yOTsv8nlbX/KaTB/ySxzf8szer/ItPv/xjR
+        7P8k1vH/KcDe/wl5mf8CXn//IY+s/yaqxP8WqsP/BaO6/wKlvP8KsMn/DqnG/xuewf8wq9L/HJ7F/wWP
+        tf8Gm8D/EbHU/xGw1P8Rpsz/CZi+/wyVvP8ancT/JZ7H/yOUvf8djLP/IY2x/yGNr/8lkbL/I4in/yd8
+        nf82eZn/MGCB/xw8Xv8jPFr/NVJn/ydDVP8iOUn/JjlH/ys5Rf8tOEH/LTc9/yozNv8lLy//DnKM/xWD
+        nf86qML/VcDZ/0yyy/8vjqj/HH2X/yaPp/9NutL/Qq/J/xmBmv8NgJj/MbHK/0nJ4/8qob//HJCv/wqC
+        oP8vs9D/Msfm/ybO7P8W0e7/DdHq/xbF3/8ZoL7/A3aV/wBkgv8Yjan/JrLM/xWtxv8Cm7T/CqO//xus
+        y/8Zm8H/I6LJ/xedxP8Ilr3/BJm//wyny/8Xs9j/Ea7T/waew/8Kk7v/EI21/xiLtf8nlL3/K5e9/x2L
+        r/8lk7X/IIqq/yqMqv8sfp7/JWaG/x5Nbv8hP2H/LERj/zNPaP8pR1v/KUJV/ytAUP8oOUf/JzQ+/yo1
+        PP8qNTj/JTAw/0mwzf8WeJT/A2B8/zSRrf9ZttL/P5q0/xZxjP8efJb/LJGq/zGhuP84rMT/GYGb/xV8
+        mP8+t9P/Q8fi/wuLpv8Nh6X/JqHA/yKoy/8et9r/E8bl/wnP6P8Rz+f/C6/J/wSRrP8Bepb/AHOQ/xmd
+        uP8gtc3/DaG7/w6Zt/8cpsb/FZ/D/w+bwP8Jl73/DJzE/xKgyf8Oncb/CKDH/w6w1v8Ssdf/B5K5/wJ8
+        pP8Rgav/KZO8/zGbwf8plrr/Lpm5/yqKrP8id5f/F2KC/xpXeP8hTG7/KUZp/zVOb/8sSWb/Kkhi/zJM
+        Yv8ySVz/KDtL/yMxPf8mMjv/KTQ6/yIuMf9Zutj/UbHO/zSVsf8vj6v/PZm1/0qkv/9Fobz/E3SO/xB2
+        j/8bhp7/NJ+3/y+Srf8UcI3/EHmV/zS40/9Kz+r/GI+u/wZ7nf8Wlbr/FqTK/xK22P8Syuf/CMPc/wS0
+        zf8ZudH/DJGt/wJ9mv8Fi6b/GazF/ye40/8Zo8D/C5S2/w2cv/8Nn8T/B5vC/wibw/8QnMX/EprE/wub
+        xP8Gpcv/EK/V/xenzv8Oj7f/EISs/yiTu/81nML/Ko6z/zuZvP8bb5L/EV19/w9Tcv8aUnL/K1R2/yhG
+        af8TL1D/IkFg/yJAXf8uSWP/Mkph/yk8T/8iLz//JTA8/ygzO/8hLDL/QZ28/02syv9Rt9T/PKTA/x1+
+        mv8bdpH/Opy2/zqswv8IepD/BGR9/yd7lv9GmLb/O5Kw/xh8mv8Yjar/O7PQ/zeoyP8Uhan/JJ/F/yCn
+        zv8Up8z/Grnb/xnA3v8Dr8n/DbTL/xuvyf8JlK7/AIqj/wuet/8ctc//HLLO/w2hwP8Po8X/C57D/wOZ
+        v/8Hm8T/FJ/K/xWXw/8EirX/BpW+/xSq0v8TrNH/EaPI/xibwP8hk7n/IYSp/xltk/8WYYf/DlV5/xRX
+        ef8YU3P/HE9v/xlDZP8NLlD/DixO/y5OcP8hQGD/J0Jg/y9GYf8qPFP/IzBE/yUwP/8pMj3/Iis0/xhm
+        hf8fdJH/NZWv/0Sqw/88nLX/J4Gb/yaIof9At8z/NKi9/yR8l/8ZYoD/LXiX/0GWtf9An77/MZy7/x6N
+        q/87qcj/MKLD/xqWu/8ZnsX/HKfN/xmqzv8YsdL/ELXR/wuvyv8Ur8r/Gq7K/wucuP8Akaz/EabC/ynE
+        4f8cttT/DaXG/wedwf8FnsT/B57H/w+dx/8Pk77/AoOu/wGFrv8Ml77/FKbK/x6tz/8hn8L/F4Gk/xFm
+        iv8XWn//FE5z/xhSdv8aU3b/DT9g/wY1Vv8MOFr/IUdq/z5ih/9LbpT/KUxw/yRBYv8tRWP/LD9Y/yQz
+        SP8jL0D/KDE9/yIrNP8cU27/E1Bp/xVedf8wgZf/TqK4/0acs/8hgJf/MqC0/0y4zf8+mLL/J3eT/xZm
+        hP8ieZf/Q6HA/0etzf8fiqr/Lpy9/zuw0P8Xmrn/C5i3/xKhwv8RoMP/DqHE/w2myP8Qqc3/GKvQ/xqq
+        z/8Tosf/C5q9/wuewP8Wr9D/HbjZ/w2pyv8Ho8X/CabK/wekyf8JoMb/DZvD/w2UvP8Ulbv/BIKn/xCL
+        rf8RgaH/FXWU/xZlhP8SUHD/Fkdn/xpGaP8UQ2X/F0hq/w09YP8NP2P/Jll//0V2nf9Tgar/WoSw/011
+        nv8pSnD/J0Nj/y5GX/8sPlL/IzFA/x4oM/8iLTX/OVpx/ypRZ/8dTmP/F1Ro/zh/k/9WqLv/PJaq/yqK
+        nv9Aobf/RKC4/zuTrv8gd5T/EGeF/x96mf85nb3/OqPE/yiXuP8tpcX/HqXB/wmbtf8FmLT/DZ2+/wyc
+        wP8Dkrr/C5vF/xil0v8UoM3/EJ7J/w6ex/8Im8D/BZzA/wykx/8In7//C6jJ/wqpyv8Jp8j/D6fK/xel
+        yv8coMX/G5W5/xJ+of8RcJH/CVh3/xBQbv8fU3H/Hkpp/xM5WP8bQGD/ETpb/w46Xf8pWoD/NmyU/0R9
+        pv9MhrH/PXSh/05+rv9eirf/PWSN/ypLbf8rRmH/KkBU/yAxP/8bKDH/IS4z/0Zcc/9BXHH/N1xx/x1O
+        Yv8gX3L/QIye/0ebrv88k6f/L4me/0Wetv9Fnbf/O5Ov/yF3lv8JY4L/G3+f/0GrzP8xo8P/Hpi2/x6i
+        vf8Unrn/DJi1/xGdv/8RncP/A5G6/wGQvP8LnMn/EaTQ/wqfyP8DmsD/Bp7B/wqjw/8Gnbv/Bpm1/xGq
+        x/8OqMX/FKjG/xylxf8dlLj/FoKm/w5xlf8bcpX/E12A/xZVdv8VRmf/Fz9h/x9Gaf8kTG//MFl8/yVQ
+        dP8KOF7/N2iS/1CEsP9OhbL/Qnup/ypikv83apz/Pm2d/z1nkv8uU3f/JkNg/yI6T/8gM0H/IS84/yEt
+        NP9HWG//RFtx/0Bgdv81YXb/Ilpu/xNXav8iboH/T56z/zOGnP9FmLH/TqG8/0ygvf87k7H/Hnua/w1x
+        kf8ijq3/Oa3M/yegvv8albP/HJq5/x6gwP8XncH/EJnA/wqYwv8Clb7/AJe//wqmyv8IqMr/BqbF/win
+        wv8IpL3/Fq/H/xmuxv8Vpb7/FJ+5/x6fu/8hjaz/E2iK/whQdf8RV33/Dk50/wpDav8ZTnX/EDti/wQs
+        VP8eS3X/Tn+p/12Quv9CdaD/GEx4/x1Qfv9AcqH/U4Sz/0Z3qP8yZZf/KFyP/xZHeP8XQ2//KVB1/yhI
+        Zf8lPlT/JjpL/x4uOf8hLjf/TFpx/0FUa/9HYnn/Nlxy/yRWa/8iXnL/HGF0/x5me/87hpz/R5Os/06b
+        tv9On7r/RZu4/zKOq/8ZfJr/DnqZ/x+TsP8zqsj/I5q6/x6Xuf8insP/G53D/xCYwP8Ilb3/AY21/wCN
+        sP8AmLn/B6fE/w+ux/8Mprz/Bpmt/xejtv8go7n/Eo2k/wp/l/8PeJP/FGeF/xhUdv8gUnb/IlJ4/x9P
+        d/8IMlv/Ai9b/w4/bP8sX47/TYOz/16XyP9jm83/VIy9/z93p/8aT4D/M2SV/09+rv9CcKD/LFyP/xpM
+        gP8UR3n/H0t4/ztiiP8zVHP/JT9X/yQ4Sv8eLTn/Hio1/09acP9HVWv/P1Rq/zpacP85Y3n/NWd9/ytk
+        ef8oZnz/GVxz/0GEnf9Hjaf/RI6p/z+Pq/8thKH/FXWS/xJ7mP8gkaz/HJGv/yKZu/8TjLH/CYas/xaX
+        vf8YncP/AoWs/wB/pP8Ajq//AJOw/w2fuv8aqb//HKW4/xiXqv8Ge43/DneM/xh3j/8MYXv/Bk9s/xxW
+        df8oVHT/CzBT/wQpT/8GKVP/G0Jv/ww5aP8hU4T/R36y/1SOxP9HhLv/NnOq/0WCuP9Nh7v/PHKl/0d5
+        q/9UgLL/QGqb/yJPgv8bTYH/HE+B/zBei/9Odpz/UHCP/y9JYf8VKj3/HCs6/x4sOP9FTWT/SVVs/0RX
+        bf89WG3/O191/zxnff81Znz/MGV7/yNbcv8oY3v/QYCZ/0eMpv85g57/KHqV/yB8l/8bgZv/GYWg/xOF
+        ov8bj7D/DYSo/waApf8Xkrn/HZrA/wiHrP8GhKf/D5Gx/w6Rrv8IeZP/BHCH/wx9kv8Teo7/BGF1/wxc
+        c/8WXXf/E1Jv/wtAX/8MO1v/DjRV/wIiRP8KMFf/L1Z//1Z/rf9ah7n/RHaq/zNqoP8zbaX/Mm+n/yxr
+        o/9Dgbf/SIS4/0V9sf9NgbP/UH6v/zxml/8oVIX/M2SW/ytcjP8uWof/U3qg/1p7mf81T2f/FCg7/xsr
+        Ov8mNED/Q01k/0RRZ/9AU2j/OFFm/zhXbf8/ZHr/PWd+/zVief86aYD/Klx2/yxhfP9Dfpn/SYul/zV/
+        mf8nfJb/J4We/xd7lf8bhaH/FYWk/xKEp/8WiK3/G4ux/xqIr/8WgKj/Enyh/xN5m/8RdJT/EWqH/xVn
+        g/8aa4X/HGZ+/x1hef8bVnH/Cjxb/ws5W/8FMVT/DTxf/yFUdv8hVHf/H1J5/y9hiv9ej7z/ZZfH/1qO
+        wP9Fe7D/Lmed/yhkmf85dar/SIS4/0mDt/8/d6r/QXam/z5vnv8uXIv/KVaG/zxrm/9JdaP/SXKb/1t/
+        o/9GZIH/Jj5T/x0wQf8hMD7/JTQ+/0NPZf8/TWP/PE9k/zxUaP88WG3/PFxy/z9ief8+ZHv/PmZ+/z5n
+        gf8xXXn/M2V//0F6lP9Gh6H/N4Kb/yp8lv8lfpj/IYGb/xZ7mP8Pdpj/EXWZ/xV0mv8WcZf/E2aO/w9c
+        hP8QWX//FFh8/yFhgv8eWHj/DkJh/w1AXv8QQF//Dj1e/wIrUf8NNl//GEZu/zBmjf9Iia7/SY2y/0iI
+        r/8oY4z/Qnql/0l+rP9Lfq7/UIS0/0h8rv8wZ5j/MWma/zdwn/9Aeaj/OnGh/zJnlf8rXYr/JleE/ypY
+        hf8vWof/QWiU/1h8ov9cfJz/N1Jr/xowQ/8eMD7/JTQ+/yAwOP87TGH/OUxg/zhOYv88VGj/PVhs/ztY
+        bf8/XXT/RGN6/z9gef9HaYL/QWaB/zBadP8vX3n/QXiS/0iGoP8zeZP/JHCJ/x9viP8Ya4f/E2WG/xNi
+        hf8TXYL/ElR8/xtVf/8eUn3/EkFr/xM+Zv8bQ2r/FDpg/wMoTP8DKU3/ETxh/xtKc/8bTnj/F0x5/y9p
+        l/9Jirf/TJXA/02Ywf9TmcP/LGuV/y5pk/8lW4b/I1WA/zlqlP9KeqT/N2mS/yRYgf8gVX7/MWaP/zRo
+        k/8vYo3/KFqF/yVVgP8nUn3/I0lz/zdXf/9Naoz/RF96/yxBV/8dLz//IDA7/yU0O/8gLzX/MUlb/zNN
+        Xv80TWD/NU5i/zpTZ/8/Wm7/QV1y/0Nddf9GYnv/RmN8/0Zkfv89X3j/LlZw/y9dd/9FeZH/QnuU/yNg
+        ef8gYHj/Hl96/xxbeP8fWXn/HVF2/xNAaP8hSHP/Kkt4/xQwXv8PKlf/FTBc/xo5Y/8XOmT/Fz9o/ztr
+        lv9GfKv/RYKy/yRnmf8vd6n/QYy+/zmEtf80fa3/NXmn/yJfjP8eT3r/CDhg/wc2W/8XQ2b/I0xt/yZR
+        cP8kVHP/H1Bx/ylZff8zZIr/NmiP/y1dhf8jUXr/J094/y9NdP8/V3r/OU9t/yg8U/8jNEX/JzZB/yg2
+        Pf8kMjb/IzEz/yxJWv8wTV7/Mkxf/zRNYf85Umb/P1hs/0Fabv9DW3D/R192/0xlff9FX3j/QV13/zpa
+        c/8uVG3/MVx0/0Fvh/87bIP/Jllw/yhcdP8YSWL/ED1b/xtFZ/8WO2L/DCxX/xIuW/8dNWX/HDRl/yxH
+        dv86Woj/OV+N/z9rmv9Shrb/TIi6/02Qxf82frX/L3mx/zh/uP83erD/Kmec/yBZi/8NQG//BidS/wku
+        VP8POVv/DDRS/wIlQP8FKEL/HUdi/ydVcP8sWnn/QG2Q/0Fskv8uWYH/Jk94/zRXff9BWXz/Ok1r/ys6
+        VP8kMkb/KzdF/zE8Rf8tOT3/JTIz/yUyMf8pR1j/LEpb/y5LXP8xTF3/Nk9i/ztTZ/89VWn/PlZq/0JZ
+        b/9GXXP/QFhv/0NcdP9CXXX/NFJr/yxMZf82WnH/NFlx/x1FXP8fS2D/ETdN/wMnP/8HLUv/DDJV/xk8
+        ZP80VoL/T3Cg/z1ej/8uU4T/PGWW/1F/sf9Qhbf/RH2x/zx7sf9JjcX/RIvG/0iOyv9Bfbr/L2Cb/yxW
+        jf8hSH3/I0l5/yNFcf82Wn//NVl4/yZNZ/8YQVj/Bi5F/wUpQP8VQFj/KlVx/z1nh/9AZor/O1+I/zdX
+        gv8xSnL/NEVl/zA8V/8nMkf/KjND/zE6Rf8zPEL/LTY4/yYxMf8nNDL/JUNU/ylHV/8rR1j/LUhZ/zJL
+        Xf83TmL/OE5i/zlOY/89Umf/PlNp/z9WbP9CWW//Qlpw/z9Yb/84U2r/Lkpf/yM/V/8iQlf/HENU/x5I
+        Wf8mUmb/LVhy/zVeff9HcZb/T3ij/1V+rf83YpT/Ejps/xM/cf81a57/SYK2/0F9s/86ebD/Onu0/zN0
+        sP81c7D/PW6q/zJVj/8aOW//JkN2/0Ngj/83VH7/P12C/0Jjgv8+Ynz/O2N6/zFacv8YQVj/BS9I/wUq
+        R/8RNlf/GDth/xs6ZP8gO2f/JDlg/x8tSv8qM0v/MDdK/zE3RP8wNj7/LzU5/y00Nv8qMzL/JzIw/yRB
+        UP8pRFT/K0VW/y1GVv8ySFn/NUpc/zVKXP82Sl3/OU9i/ztQZf9AV2z/P1dr/z1Vaf9BWW7/QVlv/zBJ
+        Xf8rQlj/OVVn/0hvff9Ofor/RniI/zhpgP81ZoT/PXCU/zNmj/87b53/PnOl/y5jlv8aUYT/HleL/zdw
+        pf8+eKz/Mmyj/zJqof83b6j/O26o/z1lnf8xT4L/IDtr/zpTgf9IYo3/KUNs/xs2W/8dPF3/Kk1r/zpg
+        fP8/Z4T/OmOB/ylScf8VPFz/BidM/wknUP8VMV7/IDdj/yQ2XP8hLkn/KjNI/y42Rv8sMj//KjA3/ywy
+        Nv8vNjj/LDQ0/yUtLf8lP07/K0NT/y5EVf8vRFX/MkZX/zZIWv81SFr/NUlb/zhOYP84T2L/OlJm/zpS
+        Zv88VGj/P1Zr/z1TaP84TGH/PVBl/0BYav9TeIT/VION/z9ygP8uYXb/L2N//zFlif8oXYf/MWeW/zhw
+        ov86dKf/LWaa/yJbj/8vaJz/Nm2g/zNnnP87baL/QnOp/z9sof87YZH/NFR+/ytKcf80Unn/Lkxx/zFP
+        dP80Unf/LE1w/y1Pcv8xVnj/L1d6/0Vtkf9Dao//O2CG/y1QeP8tTHj/MEt4/zRKd/86SnH/JjJN/yUv
+        Qv8nLj7/KjA8/ywyOf8tMzf/LjQ3/yoxM/8kLCz/JzxN/y1BUv8xQ1T/MkRV/zRFV/83R1n/NkdZ/zZI
+        W/84TV//NUxf/zNMX/82T2H/O1Vn/zxUZ/81S17/OU1g/0RVaf81S1z/Q2Nv/093gP9Hc4D/PGh9/zdk
+        gf8qWX7/K1mF/yxdjv8rXZL/LWKX/y1jmP8qYJT/Jl2P/x9Uhf8jVoj/NmeY/zpqm/81ZJL/LFqB/yNS
+        cf8jUm7/Ml18/yRMbf8vVXj/RWqP/0tulf9IbJT/QWaQ/y5UgP8qUH3/NFqH/0Rolf88X4v/OlmH/z9b
+        if9CWoj/P1J4/y06Vf8kL0H/JS08/ywzP/8vNT3/LTI3/ykvMv8nLjH/JSwu/yg5Sv8uP1D/MkJT/zND
+        VP81RVb/N0dY/zZHWP81SFr/N05f/zZOX/80Tl7/NE5f/zhSY/86U2T/NEtd/zhMXv9CVGb/LkNU/zdT
+        X/9UdoD/XYKQ/1B1iv9BZ4T/L1d7/zdgi/8tWon/LFqN/zBhlf8vZJX/KmCQ/yRaif8bUH7/F0x4/ype
+        iv8yZJD/MGSM/yNaef8WUGX/HVZq/y1jev8kV3L/NWOE/0t2m/9EapT/N1qH/zhbiv8zVof/HkR0/ydN
+        ff81Wor/NlqI/zNUg/85WIb/QFyJ/0BWff9BUW//LzxS/ycyQ/8pM0D/KjM7/ygwNP8nLzH/Jy4w/yQq
+        Lf8nN0j/LD1M/y8/T/8wQFD/MkNS/zVGVv80Rlb/MkdX/zRLW/83T17/N1Bg/zVOX/82T1//OVFh/zhN
+        X/85TF3/Pk9h/zJGV/8yS1j/R2Zz/1p8jP9bfZH/TXKK/zZeff8+aIv/PWuS/0FynP9FeaT/PXWf/zNs
+        lv80bZb/MWqS/yFagf8mX4b/LmWM/zJoi/8oXXj/HE9j/yNWaP8qXnT/Jlt0/0Fzkv9AbZL/HkZv/wkt
+        WP8WNmT/Jkd2/yNHdf8sU4D/KVF8/zBXgv8xV4H/MVN+/zdUf/9CWYT/T2KL/z9Pcf8mNk7/IDA//yEv
+        Nv8iLy//JjAv/ykwMP8jKCn/JDRE/yk6SP8sPEv/Kz1L/y1ATv8xRVP/MEZU/y9EU/8vRlT/M0pZ/zZN
+        XP84T17/OVBf/zlPX/85TV3/OEta/zlJWv82Sln/KEFP/yA+TP84WGj/XH6R/2CFmf9BaYH/PWmD/1KC
+        n/9Wiqn/TYSl/0eBov9IhKX/SISk/0N/oP87eZr/NnSV/zVyk/88dJT/NWJ9/yNGXP8jRVr/NF51/zRk
+        fv88bYz/GEdq/ww2XP8YPGP/Gzxk/xc4YP8RNVz/LVd9/ytXe/8nVHj/K1V7/y5Sef8vS3b/NU19/z1T
+        iv9EWYv/Izpb/xsyRP8dMTj/HS4t/yEtKf8oLyz/JSko/yQ0Qf8pOkf/KzxJ/yo8Sf8sPkv/L0NQ/zBG
+        Uv8vRVH/L0dT/zNKWP81TFr/N01c/zpOXf87Tl3/Okxb/zpKWv84SFj/N0lY/zNGVf8hOEb/HzlI/z1a
+        av9ggJH/Z4qe/12Emv9bhZz/W4qh/1eKov9QhZ//TIKc/0yCnf9Uiqf/YJaz/2mfvP9roL7/b5+7/1N5
+        kf8hPFD/Dik9/yJHXf89aYP/Q3SS/xlKa/8uWX3/UXed/0lulP8vVHn/DjVZ/y9bfv80YoT/K1l7/ypW
+        ev8pT3b/J0Vw/yxFdv8pQnr/OVOI/y1Hbv8jPFT/HTM+/x0vMf8hLCv/Iign/ygqKv8kMT//KThG/ys7
+        SP8qO0j/Kz1K/y5CTv8uRFD/LkRQ/zJIVP80Slb/NUtX/zZLV/84S1j/OUxZ/ztMWf86Slf/OEhV/zhH
+        U/8wPUn/LTpG/ys5R/8pOkr/N0xb/1Rrff9rhZn/bYuf/2aGnP9cgJf/WYCX/1uCmv9bgpr/U3qU/0px
+        i/9Ea4X/RGuF/01xiv83VGn/Fi5A/x44Sv8oSl//O2R8/z9ti/8RQWL/Qm+U/3qlzP9pk7r/PGeO/wcx
+        WP8mVHr/Klp+/yJRdf8qVXv/LlR8/ylKc/8oRHL/Ij9w/zBLe/87VXz/NU1q/yA0SP8YKDT/Hyox/yIn
+        K/8oLC3/IzA+/yk2RP8rOEb/KjlG/ys8Sf8uQE3/L0NP/zBEUP8zR1T/NUhV/zRIVf81SFX/N0hV/zhK
+        Vv86Slf/O0lV/zhHU/85RE//OUBL/0BET/8/RFD/MjtI/y03Rf81QlH/OUla/zZJWv80SVz/K0NW/yU+
+        Uv8mQVb/J0FW/yQ+U/8gOk//HjdM/x42TP8hOU3/HjRF/xgsPP8dNkb/ME9j/zNXb/9Dbov/QXGR/yVR
+        df8yX4X/Snyk/yJUff8RQ2z/QHKa/0BxmP8qWYH/JlN6/ytTev8rTnb/Kkt1/ydGcv8mQ3D/O1R+/0NY
+        ff8lOFX/EiE2/xslM/8jKTD/Iygr/yEsPP8oM0P/KzdF/yo3Rf8sOkj/Lz5M/zBBTv8yQ0//NUdT/zZI
+        VP81R1P/NUZS/zZGUf84SFL/OklV/ztHUv84RU//OUNM/zc7RP82NkD/NjZA/zY3Qv83OkX/MzlF/ykx
+        P/8kLjz/JjJB/yc0Q/8jMkL/Hi9A/x0sPv8fLT//IzJC/yQxQf8gLDz/GSc1/xgnNf8ZKzj/GjA9/ypF
+        Vv8yUmj/QWiD/1aDo/89bpH/Gk92/xhRev8mYYr/M26X/1uRu/9ThrD/PGuW/y9bhP8tVn7/LVR7/yxR
+        eP8nSXH/I0Fr/y9IdP9DWIP/NEVs/xwqSf8XIjb/GyQs/xojJv8fKDn/JS8//yo0Q/8rNkT/LDhG/y88
+        Sv8wP0z/MkFN/zZGUv83R1L/NkZR/zZFUP83RU//OUZQ/zlGUP85RU7/OENM/zhBSv83O0L/NzY9/zg2
+        Pv85OEH/NjdB/zEzPv8yN0L/MzpF/y00QP8rNED/LDZC/yw2Qv8sNUL/LTRB/ywzP/8qMDv/Jyw3/yIp
+        NP8gKzX/HCw1/xUoMv8gNUP/MUte/0Rnf/9WgZ//U4mq/zt4nf8xc5v/SIy1/1GSvf9blcL/T4Ow/0h4
+        pP8+apX/M16H/y9Zgf8qU3n/Ikdr/ydGbf8kPmv/Ok+A/0VXhf83RW3/HitG/xAdKf8TIib/GyMz/yIs
+        Ov8pMT//KjNB/yw2RP8vOkf/MD1J/zI/S/82Q07/NUJO/zVDTP81Q0v/NkNL/zZCS/81QUr/NEFI/zQ/
+        Rv80PkX/NDtA/zY5Pf84OT//NzpB/zI3Pv8uMzv/MzlB/zY+Rv8vN0D/LTY//y85Qv8wOUL/MDlC/y83
+        P/8tMzr/KTA2/ygtNP8mLDP/JS80/x8tMv8VJS3/HCw4/zJGV/84VWv/V4Cb/1mQr/9NkLP/T5jA/1eh
+        zP9Ynsz/VpTE/0qBsf9PgK7/RnSg/zRijP8rWYD/KVZ6/yJJav8rTXD/IT1p/y9Hef9IXI//S1yK/y4/
+        Yf8OITT/DyIt/xceLf8gKDb/Jy49/ykxP/8sNUL/LzlF/y87Rv8xPEf/NUBK/zI9R/8xPUb/Mj5G/zM+
+        Rv8yPET/MDpC/y45P/8uOD//Ljg+/y03PP8sNTn/LTU5/zA4Pf8yPEH/MDpB/ys2Pf8qNz3/LTlA/zA8
+        Q/8vO0P/LDc+/yk0Ov8pMzn/KzQ3/yozNv8pMTP/JS4w/yItL/8gLDD/HSkw/yArN/8sO0r/KUBU/1B1
+        jf9Zj6v/SI2v/0WSuf9OnMj/T5rJ/1qazP9Nh7n/T4Ky/0h4pv8zZI//JVd+/ylZfP8rVXX/J0ts/yJB
+        bP8mQXP/N0+D/0lfkP8/VH3/Fy1L/wgfNv8WHSv/Hyc0/yYuOv8nLzz/KTE+/y01Qf8uOEL/MDhC/zM+
+        Rv8vOEH/LjhA/y85Qf8wOUD/LTc9/yo0O/8oMjn/KTM5/yo1Of8qNzv/LDk9/ys5Pf8rOD3/LTpB/zA+
+        RP8tO0H/Kjk//zA+RP8vPUT/Kzk//yk2PP8nMzn/JjI1/ygxNP8oMTT/KDEy/ycwMP8jLi//Ii0w/yQu
+        M/8lKzX/Hig1/y9BUv8wUWb/S36Z/1OVtf9DkLb/TZzH/0mWxf9Yms3/SYS3/0d7rf9Ieaj/O26a/ytg
+        h/8pXH//M19+/yNKaf8gQ2v/Hz9t/yE+cP82UYT/Q12O/ydAa/8HH0f/GyIu/yEnMv8nLTj/JCo1/yMp
+        NP8oLzn/KjM8/ygvOP8sNT7/KjE6/ykyOv8rNDv/LDQ6/ykyNv8nMDT/Ji8z/ykyNv8qNDj/JzY5/yU3
+        PP8mOT7/KDpA/yo7Qv8sPEP/KztC/yo6Qf8qOkH/KjlA/yk4P/8pNj3/KTU7/yg0OP8oNDb/KDM1/ycx
+        Mv8lLi//Iiwt/yQtMP8oMDX/JCgv/yMpNP8fLTz/Dys9/zdlff9SkK3/RY6y/0mXwf9KlcX/U5XI/02K
+        vv9Beav/PHCg/0J4pf8+dZ7/KFx//y9dev8yW3j/H0Vn/x5Cav8eQG7/IUF1/zRRif8/W5T/HDdx/xce
+        J/8WHSb/GyIs/yIpMv8mLTb/KC84/ygwOP8lLDX/Iysy/yYsM/8mLTT/Ji80/yYvM/8lLjL/JC0x/yUu
+        Mv8pMjb/KjQ4/yg3PP8nOD//KDpB/yk7Qv8rPUT/Lj5F/y4+Rf8tPEX/LTtD/y06Qv8tOUH/LDc//ys0
+        PP8qNDv/KzU5/yozNv8pMTT/KC8x/yUtMP8jKy//JCov/yMmLP8mKTL/JTE9/xMrOv8mTmH/QXmT/0yP
+        r/9Tm8P/S5PC/0iLvf9Kir3/R4K1/0J6q/9Aeab/NnGZ/yVdgP8vX33/L1t5/ypWdf8lTnD/HkRs/xk9
+        bf8mRn//OVeX/ypHiv8ZICj/GyMr/yEnL/8jKTD/HyUs/xwjKf8jKS//KC82/x4lKv8hJiv/ISYs/yAn
+        LP8gJyv/IScs/yMpLv8lLDH/Ji8z/ycxN/8oNDv/KTU+/yo2P/8sOEH/LjlD/zA6Q/8wOkP/LzhE/y83
+        Qv8vNkD/LjU+/y0zPP8sMTr/LDE5/ywwN/8qLzT/KS0y/ycrMP8lKzD/JCov/yImK/8iIyn/IiUr/ycw
+        Of8cLTn/FDND/yFPZf9AeZf/WZrA/1CVwf9SlMb/TIu+/1KPwf9EgbL/OXak/zdznf8tZ4z/MWOE/yxa
+        ef8qWHX/JVFw/xhCZf8TOmX/IUV6/zZXlf8+XaD/ERke/xkiJv8fJyv/ISgs/x8lKv8dIyj/IScs/ycs
+        Mv8dISb/ICQp/yAlKv8gJCn/ICUq/yEnLP8lKzD/Jy0y/ycwNP8oMDf/KzM8/y01P/8uNUD/MDdC/zE4
+        Q/8zOEX/NDhF/zM4Rf80N0T/MzZC/zI1QP8xND7/MDI8/y8xOv8uMDj/LC42/ywtM/8qLDL/KCsx/yYp
+        Mv8mKC//IyQq/yEkKP8oLjT/KDQ9/xUsOP8MMEL/K1l0/1iOsv9bmMP/XpzO/1CPwv9SksX/RIW2/zd4
+        pv84d6L/NnGY/zBkh/8yYYL/LVx5/y5dev8fTGr/FD5i/xtAbv8kRn3/MlKO/xEbHP8VHiD/Exsc/xUd
+        Hv8dJCX/ICYo/xwhJf8cHyT/Gx4j/x4hJv8eIib/HSIm/x8jKP8hJiv/Iykw/yUrMf8jKzH/Iiox/ysx
+        Of8vND7/MDU//zE2QP8yN0H/NTdD/zU3RP81N0T/NjZD/zQ0Qf8yMz7/MTI9/zAwO/8uLzn/LC02/yos
+        NP8qKzL/KSsx/yUnL/8iJC7/JCcv/x8hJv8hJCj/Iygr/yszN/8fLjb/DiY1/xw+Vf9Ic5X/W4+4/1qV
+        xP9RkcT/S47B/0mMvv9Ag7H/N3ej/zdynP8wZIv/OWiM/zBff/8yYn7/KFVx/xpDYv8VPGD/GT1n/yNE
+        cf8PGRj/DxoZ/wwVFP8MFBP/FBoa/xsgIv8YHB//FRgc/xwfI/8dICT/HB8j/xsgJP8dISb/HyQq/yEn
+        Lv8iKC//Hycu/x4mLf8pLzf/LzQ9/y80Pf8wNT7/MjY//zQ2Qf81N0L/NTdC/zU2Qv8yMz7/LzA7/y8v
+        Ov8tLjj/Kyw1/ygqMv8mKTH/JSkv/yUpMP8hJC7/HiAs/yAiLv8bHiX/JCcq/x0hIf8iJyf/JCwx/xwp
+        NP8ZL0T/Lk5t/0h0nP9TjLn/TY6//0mOwP9Mk8T/R4y7/zx7qf84cp7/NmmT/zlpkP8uXYD/Kll3/zBc
+        d/8mT2n/GD9Z/x5CX/8cP1z/ChUT/wgTEf8QGRf/EBgX/w8WFf8WGxz/HCEh/xcaHf8cHyP/HiEk/x0g
+        JP8dICX/HiIn/yAkKv8hJy7/Iikw/yEpMP8gKC//KjI4/y82Pf8vNT7/MDY//zE3P/8zN0H/NDhC/zQ4
+        Qv80OEL/MDQ+/y0xO/8tMDr/Ki84/ygtNP8lKjL/Iiow/yIqL/8iKjD/IiYx/yIiMf8gIi//HSAo/ygs
+        Lf8dHx3/Gxwa/yUlJ/8oKzT/Hyk9/xguTP8rUXb/UYez/0iJuf9NlMX/S5PE/0eNvf9Hh7b/P3il/z9z
+        nf83aI//LVuB/yZTdf84Y3//Nl11/yBFWf8iRFf/HUBR/zA7OP8NGBX/EBkW/xcgHf8TGxn/FBoZ/xof
+        H/8TFhf/ExcY/xkcH/8aHSH/GR0h/xoeI/8bICX/HCIp/x8lLP8hKDD/Iiox/yYvNv8oMjn/KTM5/ysz
+        Ov8rMzv/LDM8/y00Pf8tND3/LTU+/yoxOv8nLzj/Ji43/yMtNf8gKzL/HSgv/xsnK/8bKCv/HCgu/x8k
+        MP8gIDD/Hh4t/x0gJ/8jJyj/HiAd/x0cF/8jHh3/JyMq/yEkNf8VJED/FTZZ/0N2oP9Gh7b/TpbG/0iT
+        w/9Hjr//To69/0aArP8/dZ7/NmiO/zBdg/8uWn3/OWJ+/zVacf8iRVb/I0RQ/zlZY/+MmJL/LDgy/wkT
+        D/8OFxT/DBQS/wQKCf8ECQj/AQID/wYKC/8KDRH/Cg0R/wkNEf8JDRL/Cg8U/wwSGf8QFh3/Exoj/xQe
+        Jf8XISj/GSQp/xkkKf8aJCv/GyUs/xwlLv8dJS7/HSYv/x0mL/8bJC3/GCEq/xgiKv8WIij/Eh4k/w4d
+        IP8MGx7/Cxse/w0bIf8OFiH/DQ8e/w4OHf8PExr/DxUU/xcYFP8dGhX/HBUU/xcQF/8aGSn/HypF/w4r
+        T/8mWIH/R4i2/0aQwP9Jlsb/TZTF/0mKuf9Ggq3/OXCX/zJmjP8qWH7/K1V6/yJJZ/8dQVj/IURT/zpZ
+        Yf99m6D/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>491, 462</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>WoW Addons Cleaner</value>
+  </data>
+  <data name="&gt;&gt;folderBrowserDialog.Name" xml:space="preserve">
+    <value>folderBrowserDialog</value>
+  </data>
+  <data name="&gt;&gt;folderBrowserDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;allAddonsName.Name" xml:space="preserve">
+    <value>allAddonsName</value>
+  </data>
+  <data name="&gt;&gt;allAddonsName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;allAddonsVersion.Name" xml:space="preserve">
+    <value>allAddonsVersion</value>
+  </data>
+  <data name="&gt;&gt;allAddonsVersion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;allAddonsAutoClean.Name" xml:space="preserve">
+    <value>allAddonsAutoClean</value>
+  </data>
+  <data name="&gt;&gt;allAddonsAutoClean.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsmiPatch.Name" xml:space="preserve">
+    <value>tsmiPatch</value>
+  </data>
+  <data name="&gt;&gt;tsmiPatch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsmiAddToDelete.Name" xml:space="preserve">
+    <value>tsmiAddToDelete</value>
+  </data>
+  <data name="&gt;&gt;tsmiAddToDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsmiRemoveToDelete.Name" xml:space="preserve">
+    <value>tsmiRemoveToDelete</value>
+  </data>
+  <data name="&gt;&gt;tsmiRemoveToDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Addon.Name" xml:space="preserve">
+    <value>Addon</value>
+  </data>
+  <data name="&gt;&gt;Addon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;file.Name" xml:space="preserve">
+    <value>file</value>
+  </data>
+  <data name="&gt;&gt;file.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;typeFile.Name" xml:space="preserve">
+    <value>typeFile</value>
+  </data>
+  <data name="&gt;&gt;typeFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
+    <value>columnHeader1</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsmiExclude.Name" xml:space="preserve">
+    <value>tsmiExclude</value>
+  </data>
+  <data name="&gt;&gt;tsmiExclude.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;progressBar.Name" xml:space="preserve">
+    <value>progressBar</value>
+  </data>
+  <data name="&gt;&gt;progressBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmMainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

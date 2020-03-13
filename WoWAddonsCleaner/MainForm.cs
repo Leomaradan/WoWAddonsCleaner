@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -34,6 +35,9 @@ namespace WoWAddonsCleaner
         private static string kCURRENT_PATH = @"C:\Program Files (x86)\World of Warcraft\_retail_";
         private static string kCURRENT_LANG = "frFR";
         private static string kCURRENT_ADDONS_EXCEPTIONS = "WeakAurasCompanion";
+
+        private bool showAddonsException = false;
+        List<ListViewItem> olItemsMissingReference;
 
 
 
@@ -203,6 +207,23 @@ namespace WoWAddonsCleaner
             }
         }
 
+        private void btnAutoClean_Click(object sender, EventArgs e)
+        {
+            if (this.autoClean.Count <= 0)
+            {
+                return;
+            }
+            var confirmResult = MessageBox.Show("Êtes-vous sur de vouloir supprimer le(s) fichier(s) en mode auto-clean ?",
+                                 "Confirmation de modification",
+                                 MessageBoxButtons.YesNo);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                scan.deleteAddons(this.autoClean);
+                scanAddons();
+            }
+        }
+
         private void ctmAllAddons_Opening(object sender, System.ComponentModel.CancelEventArgs e)
         {
             ListView wListView = this.listAllAddons;
@@ -255,6 +276,7 @@ namespace WoWAddonsCleaner
 
 
                 this.btnAutoClean.Enabled = this.autoClean.Count > 0;
+                this.updateConfig(Configs.AutoClean, String.Join(";", this.autoClean.ToArray()));
                 this.updateListAllAddons();
             }
         }
@@ -274,8 +296,14 @@ namespace WoWAddonsCleaner
 
 
                 this.btnAutoClean.Enabled = this.autoClean.Count > 0;
+                this.updateConfig(Configs.AutoClean, String.Join(";", this.autoClean.ToArray()));
                 this.updateListAllAddons();
             }
+        }
+
+        private void tsmiPatch_Click(object sender, EventArgs e)
+        {
+            this.btnPatchVersion_Click(sender, e);
         }
 
         #endregion
@@ -399,6 +427,34 @@ namespace WoWAddonsCleaner
             scanAddons();
         }
 
+        private void updateMissingExceptionList()
+        {
+            List<ListViewItem> wExceptionsItems = new List<ListViewItem>();
+            foreach (var wExceptions in this.missingAddonsExceptions)
+            {
+                ListViewItem wlItem = new ListViewItem();
+                wlItem.Text = wExceptions;
+                wExceptionsItems.Add(wlItem);
+            }
+            this.updateList(listMissingAddons, wExceptionsItems.ToArray());
+        }
+
+        private void btnShowExceptions_Click(object sender, EventArgs e)
+        {
+            if(!this.showAddonsException)
+            {
+                this.btnShowExceptions.Text = "Voir les addons";
+                this.updateMissingExceptionList();
+
+            } else
+            {
+                this.btnShowExceptions.Text = "Voir les exceptions";
+                this.updateList(listMissingAddons, olItemsMissingReference.ToArray());
+            }
+
+            this.showAddonsException = !this.showAddonsException;
+        }
+
         private void tsmiExclude_Click(object sender, EventArgs e)
         {
 
@@ -420,24 +476,40 @@ namespace WoWAddonsCleaner
         }
         private void btnDeleteMissingAddons_Click(object sender, EventArgs e)
         {
-            List<string> items = new List<string>();
-            foreach (ListViewItem Item in listMissingAddons.SelectedItems)
+
+            if (this.showAddonsException)
             {
-                items.Add(Item.Text);
+                foreach (ListViewItem wItem in listMissingAddons.SelectedItems)
+                {
+                    if (this.missingAddonsExceptions.Contains(wItem.Text))
+                    {
+                        this.missingAddonsExceptions.Remove(wItem.Text);
+                    }
+                }
+
+                this.updateConfig(Configs.AddonsExceptions, String.Join(";", this.missingAddonsExceptions.ToArray()));
+                this.updateMissingExceptionList();
             }
-
-            var confirmResult = MessageBox.Show("Êtes-vous sur de vouloir supprimer " + items.Count + " références d'addons ?",
-                     "Confirmation de suppression",
-                     MessageBoxButtons.YesNo);
-
-            if (confirmResult == DialogResult.Yes)
+            else
             {
-                scan.removeMissingAddonsReferences(items, chkSortAddonsTxt.Checked);
-                scanAddons();
+                List<string> items = new List<string>();
+                foreach (ListViewItem Item in listMissingAddons.SelectedItems)
+                {
+                    items.Add(Item.Text);
+                }
+
+                var confirmResult = MessageBox.Show("Êtes-vous sur de vouloir supprimer " + items.Count + " références d'addons ?",
+                         "Confirmation de suppression",
+                         MessageBoxButtons.YesNo);
+
+                if (confirmResult == DialogResult.Yes)
+                {
+                    scan.removeMissingAddonsReferences(items, chkSortAddonsTxt.Checked);
+                    scanAddons();
+                }
             }
 
         }
-
 
         #endregion
 
@@ -536,18 +608,18 @@ namespace WoWAddonsCleaner
 
         private void updateMissing()
         {
-            List<ListViewItem> wlItems = new List<ListViewItem>();
+            this.olItemsMissingReference = new List<ListViewItem>();
 
             foreach (var wAddons in scan.missingAddonReferences)
             {
                 ListViewItem wlItem = new ListViewItem();
                 wlItem.Text = wAddons.Key;
-                wlItems.Add(wlItem);
+                this.olItemsMissingReference.Add(wlItem);
             }
 
-            wlItems.Sort((x, y) => x.Text.CompareTo(y.Text));
+            this.olItemsMissingReference.Sort((x, y) => x.Text.CompareTo(y.Text));
 
-            this.updateList(listMissingAddons, wlItems.ToArray());
+            this.updateList(listMissingAddons, olItemsMissingReference.ToArray());
         }
 
         private void updateCharacterTree()
@@ -626,6 +698,7 @@ namespace WoWAddonsCleaner
             {
                 ListViewItem wlItem = new ListViewItem();
                 wlItem.Name = wAddons.Key;
+                wlItem.BackColor = this.autoClean.Contains(wAddons.Key) ? Color.LightSalmon : Color.LightBlue;
                 wlItem.Text = wAddons.Value.title;
                 wlItem.SubItems.Add(wAddons.Value.version.versionNum);
                 wlItem.SubItems.Add(this.autoClean.Contains(wAddons.Key) ? "Oui" : "Non");
@@ -635,7 +708,8 @@ namespace WoWAddonsCleaner
 
         }
 
-        #endregion
 
+
+        #endregion
     }
 }
