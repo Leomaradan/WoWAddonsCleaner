@@ -441,12 +441,13 @@ namespace WoWAddonsCleaner
 
         private void btnShowExceptions_Click(object sender, EventArgs e)
         {
-            if(!this.showAddonsException)
+            if (!this.showAddonsException)
             {
                 this.btnShowExceptions.Text = "Voir les addons";
                 this.updateMissingExceptionList();
 
-            } else
+            }
+            else
             {
                 this.btnShowExceptions.Text = "Voir les exceptions";
                 this.updateList(listMissingAddons, olItemsMissingReference.ToArray());

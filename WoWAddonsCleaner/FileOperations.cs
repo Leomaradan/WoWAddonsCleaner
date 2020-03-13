@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 
 namespace WoWAddonsCleaner
 {
@@ -42,14 +40,15 @@ namespace WoWAddonsCleaner
 
         public void deleteDirectory(string iPath, bool iRecursive = false)
         {
-            if(!this.oDeleteDirOperations.ContainsKey(iPath))
+            if (!this.oDeleteDirOperations.ContainsKey(iPath))
             {
                 this.oDeleteDirOperations.Add(iPath, iRecursive);
-            } else if(iRecursive)
+            }
+            else if (iRecursive)
             {
                 this.oDeleteDirOperations[iPath] = true;
             }
-            
+
         }
 
         public void deleteFile(string iPath)
@@ -57,7 +56,7 @@ namespace WoWAddonsCleaner
             if (!this.oDeleteFileOperations.Contains(iPath))
             {
                 this.oDeleteFileOperations.Add(iPath);
-            }  
+            }
         }
 
         public void replaceFile(string iPath, List<string> iContent)
@@ -110,7 +109,7 @@ namespace WoWAddonsCleaner
             DirectoryInfo wDI = new DirectoryInfo(iPath);
             List<string> wPaths = new List<string>();
 
-             foreach(DirectoryInfo wSubDir in wDI.GetDirectories())
+            foreach (DirectoryInfo wSubDir in wDI.GetDirectories())
             {
                 wPaths.Add(wSubDir.FullName);
             }
@@ -135,7 +134,7 @@ namespace WoWAddonsCleaner
         {
             FileInfo wFI = new FileInfo(iPath);
 
-            if(wFI.Exists)
+            if (wFI.Exists)
             {
                 return wFI.Name;
             }
@@ -147,7 +146,7 @@ namespace WoWAddonsCleaner
 
         public static string GetParent(string iPath)
         {
- 
+
             DirectoryInfo wDI = new DirectoryInfo(iPath);
 
             return wDI.Parent.FullName;
@@ -155,12 +154,13 @@ namespace WoWAddonsCleaner
 
         public int execute()
         {
-            foreach(KeyValuePair<string, string[]> wOperation in this.oReplaceOperations)
+            foreach (KeyValuePair<string, string[]> wOperation in this.oReplaceOperations)
             {
                 try
                 {
                     File.WriteAllLines(wOperation.Key, wOperation.Value);
-                } catch
+                }
+                catch
                 {
                     this.FailedOperations.Add("REPLACE " + wOperation.Key);
                 }

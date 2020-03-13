@@ -80,7 +80,7 @@ namespace WoWAddonsCleaner
         {
             get
             {
-                return FileOperations.ResolvePath(this.oBasePath , "Interface", "Addons");
+                return FileOperations.ResolvePath(this.oBasePath, "Interface", "Addons");
             }
         }
 
@@ -226,11 +226,11 @@ namespace WoWAddonsCleaner
 
                             foreach (string wAddonsTxtPath in FileOperations.GetFiles(wCharacterDirPath, "AddOns.txt"))
                             {
-                                
+
 
                                 var wLines = FileOperations.ReadFile(wAddonsTxtPath);
 
-                                if(wLines != null)
+                                if (wLines != null)
                                 {
                                     oAddonsTxt.Add(FileOperations.ExtractFileName(wAddonsTxtPath));
 
@@ -344,7 +344,7 @@ namespace WoWAddonsCleaner
                     string notesLocalized = null;
 
                     string filename = wTocName.Substring(0, wTocName.Length - 4).ToLower();
-                    if(wLines != null)
+                    if (wLines != null)
                     {
                         foreach (var line in wLines)
                         {
@@ -559,7 +559,7 @@ namespace WoWAddonsCleaner
 
             if (FileOperations.DirectoryExists(wServerBPath))
             {
-                
+
                 this.progressBar.Maximum += 1;
                 string wParentPath = FileOperations.GetParent(wServerBPath);
 
@@ -591,7 +591,7 @@ namespace WoWAddonsCleaner
             });
 
             string pathServerA = FileOperations.ResolvePath(this.pathWTF, iAccount, iServer);
-            string pathServerB = FileOperations.ResolvePath(this.pathWTF, iAccount , iServer.Replace('’', '\''));
+            string pathServerB = FileOperations.ResolvePath(this.pathWTF, iAccount, iServer.Replace('’', '\''));
 
             if (FileOperations.DirectoryExists(pathServerA))
             {
@@ -651,7 +651,7 @@ namespace WoWAddonsCleaner
                 {
                     string[] lines = FileOperations.ReadFile(wFullPath);
 
-                    if(lines != null)
+                    if (lines != null)
                     {
                         List<string> newLines = new List<string>();
 
@@ -724,7 +724,7 @@ namespace WoWAddonsCleaner
                     purge.Value.Sort((x, y) => x.CompareTo(y));
                 }
 
-                wFI.replaceFile(FileOperations.ResolvePath(this.pathWTF,purge.Key), purge.Value);
+                wFI.replaceFile(FileOperations.ResolvePath(this.pathWTF, purge.Key), purge.Value);
 
             }
 
@@ -761,7 +761,7 @@ namespace WoWAddonsCleaner
 
         private void prepareRemovingMissingAddonsReferences(string iAccount, string iServer, string iCharacter, string iAddon)
         {
-            string wFilename = FileOperations.ResolvePath(iAccount , iServer , iCharacter , "AddOns.txt");
+            string wFilename = FileOperations.ResolvePath(iAccount, iServer, iCharacter, "AddOns.txt");
             string wPath = FileOperations.ResolvePath(this.pathWTF, wFilename);
 
             if (FileOperations.FileExists(wPath))
@@ -769,11 +769,11 @@ namespace WoWAddonsCleaner
                 if (!oPurgeAddons.ContainsKey(wFilename))
                 {
                     string[] wLines = FileOperations.ReadFile(wPath);
-                    if(wLines != null)
+                    if (wLines != null)
                     {
                         oPurgeAddons.Add(wFilename, new List<string>(wLines));
                     }
-                    
+
                 }
 
                 List<string> wNewLines = new List<string>();
@@ -820,8 +820,8 @@ namespace WoWAddonsCleaner
                             foreach (KeyValuePair<string, List<string>> character in server.Value)
                             {
 
-                                string pathServerA = FileOperations.ResolvePath(this.pathWTF, account.Key, server.Key, character.Key,  "SavedVariables");
-                                string pathServerB = FileOperations.ResolvePath(this.pathWTF, account.Key, server.Key.Replace('’', '\''), character.Key,  "SavedVariables");
+                                string pathServerA = FileOperations.ResolvePath(this.pathWTF, account.Key, server.Key, character.Key, "SavedVariables");
+                                string pathServerB = FileOperations.ResolvePath(this.pathWTF, account.Key, server.Key.Replace('’', '\''), character.Key, "SavedVariables");
 
                                 if (FileOperations.DirectoryExists(pathServerA))
                                 {
